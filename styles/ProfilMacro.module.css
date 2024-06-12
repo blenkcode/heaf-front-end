@@ -1,0 +1,100 @@
+.maincontainer {   
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* .h1 {
+    font-size: 40px;
+  background-color: blue;
+    margin: 0px;
+    width: 80%;
+    padding-bottom: 20px;
+} */
+
+
+.macro{
+    display: flex;
+    justify-content: center;
+padding:0px;
+    padding-top: 50px;
+    background-color:#457894e9;
+    border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+    padding: 30px 50px 50px 50px;
+}
+.proteines,
+.glucides,
+.lipides {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+   
+    color: black;
+   
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    transition: filter 0.3s ease;
+}
+
+.imgcontainer {
+    position: relative;
+    border: solid 1px black;
+    height: 99%;
+    overflow: hidden; /* Assure que le contenu ne dépasse pas la taille du conteneur */
+}
+
+.label {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    padding:10px;
+    background-color:#ffffff;
+    border-radius: 10px;
+}
+.data{
+    color:#3b6880
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imgcontainer:hover .image {
+    filter: blur(5px);
+}
+
+.imgcontainer:hover .overlay {
+    opacity: 1;
+}
+
+.piechart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color:#3b6880;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

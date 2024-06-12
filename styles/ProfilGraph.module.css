@@ -1,0 +1,10 @@
+.maincontainer{
+    border-radius: 10px;
+    background-color:#457894e9;
+    height: 100%;
+    width: 100%;
+    color: #F4EBD6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

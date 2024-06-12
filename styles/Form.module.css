@@ -1,0 +1,180 @@
+.maincontainer{
+    display: flex;
+   
+   
+
+ 
+
+   
+  
+}
+
+.log{
+   
+   
+    background-color: #457894e1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:500px;
+    width: 50%;
+margin-right: 150px;
+    border-radius: 10px;
+   
+  
+ 
+}
+.inscriptioncontainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+ 
+}
+.titlemain{
+    background-color: #124660 ;
+    color: #F4EBD6;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:0px;
+    position:relative;
+    top:-4%;
+    display: flex;
+    justify-content: center;
+    width:95%;
+    font-family: 'KumbhSans', sans-serif;
+    border-radius: 5px;
+    margin-bottom:10px;
+}
+.contentleft{
+    columns:1/2;
+    font-size: 40px;
+   display: flex;
+color:rgb(0, 0, 0);
+   align-items: flex-start;
+   flex-direction: column;
+   height: 100%;
+   width: 60%;
+   padding-right: 10%;
+ 
+  
+}
+.bienvenue{
+    font-size: 70px;
+}
+
+.inscription{
+    display: flex;
+    flex-direction: column;
+    color: #F4EBD6;
+    margin-right:50px;
+    padding-bottom: 15px;
+    
+}
+.inscriptionright{
+    display: flex;
+    flex-direction: column;
+    color: #F4EBD6;
+    margin-left:50px;
+}
+.connexion{
+    display: flex;
+    flex-direction: column;
+    color: #F4EBD6;
+    padding-top:12.6%
+}
+
+.label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    margin-left: 10px;
+    color: #F4EBD6;
+}
+
+.input{
+    border:  #124660 solid 2px;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+ 
+    
+}
+.btn{
+    border:solid #F4EBD6 1px;
+    background-color:  #124660;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding:10px 30px 10px 30px;
+    color:#F4EBD6;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border:solid #F4EBD6 1px;
+    background-color:  #33698392;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding:10px 30px 10px 30px;
+    color:#F4EBD6;
+     width: 100%;
+    color:white;
+    border-radius: 20px;
+    letter-spacing: 8px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.pseudo{
+color:   #457994;
+}
+.sexe{
+    background-color:  #ffffff;
+    width: 200px;
+    padding:10px;
+    border:  #124660 solid 2px;
+    border-radius: 20px;
+    
+}
+.femme{
+    color:black;
+}
+.homme{
+    color: black;
+}
+
+.checkbox{
+    border-radius: 100px;
+}
+.icon{
+    margin-left: 30%;
+    color: #33698392;
+}
+
+.choice{
+    margin-bottom: 20px;
+}
+
+.popup{
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    top: 40%;
+    color: black;
+    right: 10%;
+    padding:17px;
+    border:1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 18px;
+}
+.titlepopup{
+    font-size: 20px;
+}

@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono&display=swap');
+
+@font-face {
+  font-family: 'KumbhSans';
+  src: url('/fonts/KumbhSans-Regular.ttf') format('opentype');
+  font-weight: 300;
+}
+.container {
+
+
+    background-color:#457994;
+    display: grid;
+  grid-template-columns: 40% 60%;/* Two columns each taking half of the available space */
+  grid-template-rows: 1fr; /* Four rows */
+    margin: 0px;
+    height: 105px;
+    width: 100%;
+    position: fixed;
+    
+  }
+
+
+.logocontainer{
+  font-family: 'KumbhSans', sans-serif;
+    grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5%;
+ 
+  
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-right: 30px;
+   
+
+}
+.heaf{
+    font-size: 50px;
+    margin:0;
+    color:#ffffff;
+    font-weight: 300;
+    letter-spacing: 5px;;
+}
+
+.list{
+  font-family: 'KumbhSans', sans-serif;
+    grid-row: 1 / 2;
+    grid-column: 2/ 3;
+    color: #fffefb;
+    display:flex;
+    align-items: center;
+   font-size: 20px;
+margin:0;
+padding:0;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+   
+    
+    
+    
+}
+
+.list li{
+    cursor: pointer;
+    
+}
+.list li:hover{
+  padding:40px;
+  cursor: pointer;
+  border: solid white 2px;
+}
+
+

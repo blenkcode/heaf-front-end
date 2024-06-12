@@ -1,0 +1,81 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    top:0px;
+    background-image: url('/BG11.jpg');
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  
+  }
+  
+  .headercontainer{
+    width: 100%;
+    position: fixed;
+    width: 100%;
+  }
+  
+
+  
+  .signup{
+    position: absolute;
+    top:25%;
+  
+    width: 75%;
+  
+   
+  }
+
+  .content{
+    position: absolute;
+
+width: 80%;
+height: 70%;
+top: 18%;
+display: flex;
+
+
+
+}
+
+.contentleft{
+width:90%;
+}
+.contentright{
+  height: 70%;
+  width: 100%;
+  /* padding-right: 20px;
+  padding-left: 50px;
+  padding-top: 50px;; */
+
+}
+
+  .profilData{
+    width: 500px;
+    height: 100%;
+   margin-right: 50px;
+    
+
+    
+  }
+
+ 
+.profilMacro{
+    height: 400px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.profilGraph{
+    height: 295px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}

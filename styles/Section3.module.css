@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'KumbhSans';
+    src: url('/fonts/KumbhSans-Regular.ttf') format('opentype');
+    font-weight: 300;
+  }
+  
+  .main {
+  
+  
+    
+
+   
+    width: 100%;
+    top:0px;
+    height: 320px;
+  background-color: #124660;
+    
+    
+  
+  
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+
+  
+    
+  }
+  
+
+  .leftSection{
+display: flex;
+justify-content: flex-start;
+
+flex-direction: column;
+width: 300px;
+margin: 50px;
+
+  }
+
+  .middleSection{
+    display: flex;
+justify-content: flex-start;
+
+flex-direction: column;
+width: 300px;
+margin: 50px;
+
+  }
+
+  .rightSection{
+    display: flex;
+    justify-content: flex-start;
+
+flex-direction: column;
+width: 300px;
+margin: 50px;
+
+  }
+  .disclamerSection{
+    display: flex;
+    justify-content: flex-start;
+
+flex-direction: column;
+width: 300px;
+margin: 50px;
+
+  }
+
+  .title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;;
+  }
+
+  .content{
+    font-size: 15px;
+    color:white;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .icon{
+    font-size: 30px;
+    margin: 10px;
+    color: white;;
+  }
