@@ -43,7 +43,7 @@ const LineChart = () => {
   console.log("Weight:", weight);
   // Mise à jour des labels et data du lineChart avec weights
   useEffect(() => {
-    fetch(`http://localhost:3000/users/weights/${token}`, {
+    fetch(`https://heaf-back-end.vercel.app/users/weights/${token}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
