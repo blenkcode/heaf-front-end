@@ -13,6 +13,7 @@ const initialState = {
     BMR: null,
     objectif: null,
     caloriesDeficit: null,
+    dataUpdated: false,
   },
 };
 
@@ -62,6 +63,9 @@ export const userSlice = createSlice({
     updateObjectif: (state, action) => {
       state.value.objectif = action.payload;
     },
+    updateDataUpdated: (state, action) => {
+      state.value.dataUpdated = action.payload;
+    },
   },
 });
 
@@ -74,5 +78,6 @@ export const {
   loginn,
   updateCaloriesData,
   updateObjectif,
+  updateDataUpdated,
 } = userSlice.actions;
 export default userSlice.reducer;

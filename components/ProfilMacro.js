@@ -27,6 +27,7 @@ function ProfilMacro() {
       setProteines(proteines);
 
       const calculateLip = (objectif) => {
+        console.log(objectif);
         const lip = (30 * (objectif / 100)) / 9;
         return Math.round(lip);
       };
@@ -42,7 +43,7 @@ function ProfilMacro() {
       const glucides = calculateGlucides(objectif, proteines, lipides);
       setGlucides(glucides);
     }
-  }, [caloriesDeficit, weight]);
+  }, [caloriesDeficit, weight, objectif]);
 
   return (
     <div className={styles.maincontainer}>

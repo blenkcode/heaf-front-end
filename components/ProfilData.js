@@ -2,7 +2,11 @@ import styles from "../styles/ProfilData.module.css";
 
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { updateData, updateCalories, updateObjectif } from "../reducers/user";
+import {
+  updateData,
+  updateObjectif,
+  updateDataUpdated,
+} from "../reducers/user";
 import { useRouter } from "next/router";
 
 function ProfilData() {
@@ -12,6 +16,7 @@ function ProfilData() {
   const TDEE = useSelector((state) => state.user.value.TDEE);
   const BMR = useSelector((state) => state.user.value.BMR);
   const weight = useSelector((state) => state.user.value.weight);
+  const dataUpdated = useSelector((state) => state.user.value.dataUpdated);
   const caloriesDeficit = useSelector(
     (state) => state.user.value.caloriesDeficit
   );
@@ -46,6 +51,7 @@ function ProfilData() {
               );
               const newObjectif = data.data.TDEE + data.data.caloriesDeficit;
               setObjectif(newObjectif);
+              dispatch(updateDataUpdated(false));
             } else {
               console.error("Le tableau weights est vide ou n'existe pas.");
             }
@@ -55,7 +61,7 @@ function ProfilData() {
           console.error("Erreur lors de la récupération des données :", error);
         });
     }
-  }, [token, dispatch]);
+  }, [token, dispatch, dataUpdated]);
   // useEffect(() => {
   //   const newObjectif = TDEE - caloriesDeficit;
   //   setObjectif(newObjectif);

@@ -11,7 +11,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { updateWeight, updateCaloriesData } from "../reducers/user";
+import { updateWeight, updateDataUpdated } from "../reducers/user";
 import styles from "../styles/Profil.module.css";
 
 // Enregistrer les composants nécessaires de Chart.js
@@ -75,21 +75,25 @@ const LineChart = () => {
     event.preventDefault();
     const currentDate = new Date().toISOString(); // Utiliser le format ISO pour une date uniforme
     const newWeightEntry = { weight: newWeight, date: currentDate };
-    console.log(newWeightEntry);
+    console.log("New weight entry:", newWeightEntry);
 
     fetch(`https://heaf-back-end.vercel.app/users/newWeight/${token}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newWeightEntry),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        console.log("Response from weight update:", response);
+        return response.json();
+      })
       .then((data) => {
+        console.log("Data from weight update:", data);
         if (data.result) {
           dispatch(updateWeight(newWeight));
           console.log(newWeight);
           const BMR = calculateBMR(newWeight, height, age, gender);
           const TDEE = calculateTDEE(BMR, activityLevel);
-          console.log("fetch", BMR, TDEE);
+          console.log("Calculated BMR and TDEE:", BMR, TDEE);
           return fetch(
             `https://heaf-back-end.vercel.app/users/updateData/${token}`,
             {
@@ -105,11 +109,20 @@ const LineChart = () => {
           throw new Error("Failed to update weight");
         }
       })
-      .then((response) => response.json())
+      .then((response) => {
+        console.log("Response from TDEE update:", response);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
+        console.log("Data from TDEE update:", data);
         if (data.result) {
-          console.log("fetching tdee et bmr : ", data.TDEE, data.BMR);
+          const { TDEE, BMR } = data.user;
+          console.log("fetching tdee et bmr : ", TDEE, BMR);
           setNewWeight("");
+          dispatch(updateDataUpdated(true));
         }
       })
       .catch((error) => {
