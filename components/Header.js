@@ -8,7 +8,7 @@ function Header({ onClick }) {
         <div className={styles.logocontainer}>
           <img
             className={styles.logo}
-            src="logohf.png"
+            src="logoheaffinal.png"
             alt="Description de l'image"
           />
           <h1 className={styles.heaf}>Heaf</h1>

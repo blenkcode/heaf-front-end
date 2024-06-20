@@ -12,7 +12,7 @@
 .log{
    
    
-    background-color: #457894e1;
+    background-color:#1c70a4c5;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -31,9 +31,8 @@ margin-right: 150px;
     margin: 0px;
  
 }
-.titlemain{
-    background-color: #124660 ;
-    color: #F4EBD6;
+.titlemain{ background-color: #13527a;
+    color: #ffffff;
     padding-left:50px;
     padding-right:50px;
     padding-top: 10px;
@@ -76,13 +75,13 @@ color:rgb(0, 0, 0);
 .inscriptionright{
     display: flex;
     flex-direction: column;
-    color: #F4EBD6;
+    color: #ffffff;
     margin-left:50px;
 }
 .connexion{
     display: flex;
     flex-direction: column;
-    color: #F4EBD6;
+    color: #ffffff;
     padding-top:12.6%
 }
 
@@ -91,7 +90,7 @@ color:rgb(0, 0, 0);
     margin-bottom: 5px;
     font-size: 15px;
     margin-left: 10px;
-    color: #F4EBD6;
+    color: rgb(255, 255, 255);
 }
 
 .input{
@@ -105,12 +104,12 @@ color:rgb(0, 0, 0);
     
 }
 .btn{
-    border:solid #F4EBD6 1px;
-    background-color:  #124660;
-    margin-top: 40px;
+    border:solid #ffffff 1px;
+    background-color:  #33698392;
+    margin-top: 44px;
     margin-bottom: 50px;
     padding:10px 30px 10px 30px;
-    color:#F4EBD6;
+    color:#ffffff;
     width: 100%;
     border-radius: 20px;
     transition: 0.5s;
@@ -119,12 +118,12 @@ color:rgb(0, 0, 0);
 }
 
 .btn:hover{
-    border:solid #F4EBD6 1px;
-    background-color:  #33698392;
-    margin-top: 40px;
+    border:solid #ffffff 1px;
+    background-color:  #13527A;
+    margin-top: 44px;
     margin-bottom: 50px;
     padding:10px 30px 10px 30px;
-    color:#F4EBD6;
+    color:#ffffff;
      width: 100%;
     color:white;
     border-radius: 20px;
@@ -134,7 +133,7 @@ color:rgb(0, 0, 0);
 }
 
 .pseudo{
-color:   #457994;
+color: #1C71A4;
 }
 .sexe{
     background-color:  #ffffff;
@@ -166,10 +165,10 @@ color:   #457994;
 .popup{
     position: absolute;
     background-color: #ffffff;
-    width: 300px;
-    top: 40%;
+    width: 500px;
+    top: 65%;
     color: black;
-    right: 10%;
+    right: 70%;
     padding:17px;
     border:1px solid rgb(0, 0, 0);
     border-radius: 10px;
@@ -178,3 +177,96 @@ color:   #457994;
 .titlepopup{
     font-size: 20px;
 }
+
+@media (max-width: 1567px) {
+    .input{
+        border:  #124660 solid 2px;
+        border-radius: 20px;
+        height: 40px;
+        width: 90%;
+        display: flex;
+        padding: 15px;
+     
+        
+    }
+    .popup{
+        position: absolute;
+        background-color: #ffffff;
+        width: 500px;
+        top: 65%;
+        color: black;
+        right: 62%;
+        padding:17px;
+        border:1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    .log{
+   
+        background-color:#1c70a4c5;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height:500px;
+        width: 50%;
+    margin-right: 150px;
+    
+        border-radius: 10px;
+       
+      
+     
+    }
+    .inscription{
+        display: flex;
+        flex-direction: column;
+        color: #F4EBD6;
+        margin-right:0px;
+        padding-bottom: 15px;
+        
+    }
+    .btn{
+        border:solid #ffffff 1px;
+        background-color:  #33698392;
+        margin-top: 44px;
+        margin-bottom: 50px;
+        padding:10px 30px 10px 30px;
+        color:#ffffff;
+        width: 165px;
+        border-radius: 20px;
+        transition: 0.5s;
+        letter-spacing: 4px;
+        cursor: pointer;
+    }
+    
+    .btn:hover{
+        border:solid #ffffff 1px;
+        background-color: #13527A;
+        margin-top: 44px;
+        margin-bottom: 50px;
+        padding:10px 30px 10px 30px;
+        color:#ffffff;
+        width: 165px;
+        color:white;
+        border-radius: 20px;
+        letter-spacing: 8px;
+        transition: 1s;
+        cursor: pointer;
+    }
+    .sexe{
+        background-color:  #ffffff;
+        width: 165px;
+        padding:10px;
+        border:  #124660 solid 2px;
+        border-radius: 20px;
+        font-size: 12px;
+        
+    }
+    .label{
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        margin-left: 10px;
+        color: #ffffff;
+    }
+  }

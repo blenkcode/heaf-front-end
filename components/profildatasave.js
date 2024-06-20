@@ -1,8 +1,8 @@
 import styles from "../styles/ProfilData.module.css";
 
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
-import { updateData, updateCalories, updateObjectif } from "../reducers/user";
+import { useEffect } from "react";
+import { updateData, updateCalories, updateobjectif } from "../reducers/user";
 import { useRouter } from "next/router";
 
 function ProfilData() {
@@ -12,15 +12,12 @@ function ProfilData() {
   const TDEE = useSelector((state) => state.user.value.TDEE);
   const BMR = useSelector((state) => state.user.value.BMR);
   const weight = useSelector((state) => state.user.value.weight);
-  const caloriesDeficit = useSelector(
-    (state) => state.user.value.caloriesDeficit
-  );
-  const [objectif, setObjectif] = useState(null);
-  dispatch(updateObjectif(objectif));
 
-  // const calories = TDEE + deficit;
+  const deficit = useSelector((state) => state.user.value.calories);
 
-  // dispatch(updateobjectif(calories));
+  const calories = TDEE + deficit;
+  console.log(calories, TDEE, deficit);
+  dispatch(updateobjectif(calories));
   // Récupération des données utilisateur
   useEffect(() => {
     if (token) {
@@ -28,6 +25,8 @@ function ProfilData() {
         .then((response) => response.json())
         .then((data) => {
           if (data.result) {
+            console.log(data);
+
             // Vérifier si le tableau weights existe et contient des éléments
             const weights = data.data.weights;
 
@@ -41,11 +40,9 @@ function ProfilData() {
                   BMR: data.data.BMR,
                   TDEE: data.data.TDEE,
                   age: data.data.age,
-                  caloriesDeficit: data.data.caloriesDeficit,
                 })
               );
-              const newObjectif = data.data.TDEE + data.data.caloriesDeficit;
-              setObjectif(newObjectif);
+              dispatch(updateCalories(data.data.calories));
             } else {
               console.error("Le tableau weights est vide ou n'existe pas.");
             }
@@ -56,10 +53,13 @@ function ProfilData() {
         });
     }
   }, [token, dispatch]);
+
+  // Mise à jour des calories après récupération des données
   // useEffect(() => {
-  //   const newObjectif = TDEE - caloriesDeficit;
-  //   setObjectif(newObjectif);
-  // }, [token, dispatch]);
+  //   if (TDEE) {
+  //     dispatch(updateCalories(calories));
+  //   }
+  // }, [TDEE, calories, dispatch]);
 
   return (
     <div className={styles.maincontainer}>
@@ -71,11 +71,11 @@ function ProfilData() {
         </span>
         <span className={styles.li}>
           Objectif journalier :{" "}
-          <span className={styles.data}> {objectif} kcal </span>
+          <span className={styles.data}> {calories} kcal </span>
         </span>
         <span className={styles.li}>
           Déficit / Surplus :{" "}
-          <span className={styles.data}> {caloriesDeficit} kcal</span>{" "}
+          <span className={styles.data}> {deficit} kcal</span>{" "}
         </span>
         <span className={styles.li}>
           BMR :<span className={styles.data}>{BMR} kcal</span>{" "}

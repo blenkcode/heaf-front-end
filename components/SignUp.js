@@ -6,6 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function SignUp({ onSuccess, onToggleForm }) {
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+  const [emailError, setEmailError] = useState(false);
+  const [userError, setUserError] = useState(false);
+
   const dispatch = useDispatch();
   const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
@@ -13,6 +17,10 @@ function SignUp({ onSuccess, onToggleForm }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleRegister = () => {
+    if (!EMAIL_REGEX.test(email)) {
+      setEmailError(true);
+      return;
+    }
     fetch("https://heaf-back-end.vercel.app/users/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -26,13 +34,18 @@ function SignUp({ onSuccess, onToggleForm }) {
           setEmail("");
           setPassword("");
           onSuccess();
+        } else {
+          setUserError(true);
         }
       });
   };
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
-
+  const handlePseudoClick = () => {
+    setUserError(false);
+    setEmailError(false);
+  };
   return (
     <div className={styles.maincontainer}>
       <div className={styles.contentleft}>
@@ -42,17 +55,27 @@ function SignUp({ onSuccess, onToggleForm }) {
         </div>
         <br></br>
         <div className={styles.subTitle}>
-          Votre partenaire de confiance pour un mode de vie équilibré.
+          Votre partenaire santé pour un mode de vie équilibré.
+          <br></br>
+          <br></br>
+          <div className={styles.gimmick}>
+            Calculez vos besoins nutrionionels, suivez nos recomandations
+            <br></br>
+            <br></br>
+            Observez-vous évoluer.
+          </div>
         </div>{" "}
-        <div className={styles.subtitle}>
-          Découvrez nos programmes personnalisés pour atteindre vos objectifs de
-          santé et de bien-être durable.
-          <button className={styles.btnprog} onClick={toggleMenu}>
-            <FontAwesomeIcon
-              className={`${styles.icon} ${isMenuOpen ? styles.rotate : ""}`}
-              icon={faCircleChevronRight}
-            />
-          </button>
+        <div
+          className={`${styles.subtitle} ${
+            isMenuOpen ? styles.subtitleOpen : ""
+          }`}
+        >
+          Découvrez nos programmes personnalisés.
+          <FontAwesomeIcon
+            onClick={toggleMenu}
+            className={`${styles.icon} ${isMenuOpen ? styles.rotate : ""}`}
+            icon={faCircleChevronRight}
+          />
           <div
             className={`${styles.dropdownMenu} ${
               isMenuOpen ? styles.show : ""
@@ -72,7 +95,7 @@ function SignUp({ onSuccess, onToggleForm }) {
           </div>
         </div>
       </div>
-
+      <div className={styles.space}></div>
       <div className={styles.log}>
         <div className={styles.menu}>
           {" "}
@@ -93,7 +116,11 @@ function SignUp({ onSuccess, onToggleForm }) {
             placeholder="ex: John Doe"
             value={pseudo}
             onChange={(e) => setPseudo(e.target.value)}
+            onClick={handlePseudoClick}
           ></input>
+          {userError && (
+            <div className={styles.error2}>L'utilisateur existe déjà</div>
+          )}
           <span className={styles.label}>Adresse mail</span>
           <input
             className={styles.input}
@@ -101,7 +128,11 @@ function SignUp({ onSuccess, onToggleForm }) {
             placeholder="johndoe@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onClick={handlePseudoClick}
           ></input>
+          {emailError && (
+            <div className={styles.error}>Invalid email address</div>
+          )}
           <span className={styles.label}>Mot de passe</span>
           <input
             className={styles.input}

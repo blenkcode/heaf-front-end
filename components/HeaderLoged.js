@@ -1,11 +1,15 @@
 import styles from "../styles/Header.module.css";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { logout } from "../reducers/user";
 
 function HeaderLoged({ onClick }) {
+  const dispatch = useDispatch();
   const router = useRouter();
   const handleHome = () => {
-    router.push("/index");
+    dispatch(logout());
+    router.push("/");
   };
 
   return (
@@ -13,8 +17,9 @@ function HeaderLoged({ onClick }) {
       <div className={styles.container}>
         <div className={styles.logocontainer}>
           <img
+            onClick={() => handleHome()}
             className={styles.logo}
-            src="logoheafff.jpeg"
+            src="logoheaffinal.png"
             alt="Description de l'image"
           />
           <h1 onClick={() => handleHome()} className={styles.heaf}>

@@ -8,36 +8,41 @@ import PieChart from "./PieChart";
 
 function ProfilMacro() {
   const weight = useSelector((state) => state.user.value.weight);
-  const calories = useSelector((state) => state.user.value.calories);
+  const caloriesDeficit = useSelector(
+    (state) => state.user.value.caloriesDeficit
+  );
+  const objectif = useSelector((state) => state.user.value.objectif);
+
+  console.log(objectif);
   const [proteines, setProteines] = useState(0);
   const [lipides, setLipides] = useState(0);
   const [glucides, setGlucides] = useState(0);
 
   useEffect(() => {
-    if (calories && weight) {
+    if (caloriesDeficit && weight) {
       const calculateProt = (weight) => {
         return 2 * weight;
       };
       const proteines = calculateProt(weight);
       setProteines(proteines);
 
-      const calculateLip = (calories) => {
-        const lip = (30 * (calories / 100)) / 9;
+      const calculateLip = (objectif) => {
+        const lip = (30 * (objectif / 100)) / 9;
         return Math.round(lip);
       };
-      const lipides = calculateLip(calories);
+      const lipides = calculateLip(objectif);
       setLipides(lipides);
 
-      const calculateGlucides = (calories, proteines, lipides) => {
-        console.log(calories, proteines, lipides);
-        const remainingCalories = calories - (proteines * 4 + lipides * 9);
+      const calculateGlucides = (objectif, proteines, lipides) => {
+        console.log(objectif, proteines, lipides);
+        const remainingCalories = objectif - (proteines * 4 + lipides * 9);
         return Math.round(remainingCalories / 4);
       };
 
-      const glucides = calculateGlucides(calories, proteines, lipides);
+      const glucides = calculateGlucides(objectif, proteines, lipides);
       setGlucides(glucides);
     }
-  }, [calories, weight]);
+  }, [caloriesDeficit, weight]);
 
   return (
     <div className={styles.maincontainer}>

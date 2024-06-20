@@ -12,6 +12,7 @@ import {
   Legend,
 } from "chart.js";
 import { updateWeight, updateCaloriesData } from "../reducers/user";
+import styles from "../styles/Profil.module.css";
 
 // Enregistrer les composants nécessaires de Chart.js
 ChartJS.register(
@@ -35,13 +36,20 @@ const LineChart = () => {
   const gender = useSelector((state) => state.user.value.gender);
   const activityLevel = useSelector((state) => state.user.value.activityLevel);
   const weight = useSelector((state) => state.user.value.weight);
-  console.log("Token:", token);
-  console.log("Height:", height);
-  console.log("Age:", age);
-  console.log("Gender:", gender);
-  console.log("Activity Level:", activityLevel);
-  console.log("Weight:", weight);
-  // Mise à jour des labels et data du lineChart avec weights
+  const deficit = useSelector((state) => state.user.value.calories);
+  console.log("poids actuel:", weight);
+
+  const calculateBMR = (weight, height, age, gender) => {
+    if (gender === "male") {
+      return 10 * weight + 6.25 * height - 5 * age + 5;
+    } else {
+      return 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+  };
+  const calculateTDEE = (BMR, activityLevel) => {
+    return BMR * activityLevel;
+  };
+  //récupération du poids modifié de la bdd
   useEffect(() => {
     fetch(`https://heaf-back-end.vercel.app/users/weights/${token}`, {
       method: "GET",
@@ -63,34 +71,13 @@ const LineChart = () => {
         console.error("Error fetching data:", error);
       });
   }, [newWeight]);
-  useEffect(() => {
-    const calculateBMR = (weight, height, age, gender) => {
-      if (gender === "male") {
-        return 10 * weight + 6.25 * height - 5 * age + 5;
-      } else {
-        return 10 * weight + 6.25 * height - 5 * age - 161;
-      }
-    };
-    const calculateTDEE = (BMR, activityLevel) => {
-      return BMR * activityLevel;
-    };
-
-    const BMR = calculateBMR(weight, height, age, gender);
-    const TDEE = calculateTDEE(BMR, activityLevel);
-    const deficit = 500;
-    const calories = TDEE - deficit;
-    console.log(calories, TDEE, BMR);
-    dispatch(updateCaloriesData({ calories: calories, TDEE: TDEE, BMR: BMR }));
-  }, [newWeight]);
-  //Ajout de data dans la collection users / weights
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const currentDate = new Date().toISOString(); // Utiliser le format ISO pour une date uniforme
     const newWeightEntry = { weight: newWeight, date: currentDate };
     console.log(newWeightEntry);
 
-    fetch(`http://localhost:3000/users/newWeight/${token}`, {
+    fetch(`https://heaf-back-end.vercel.app/users/newWeight/${token}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newWeightEntry),
@@ -99,9 +86,39 @@ const LineChart = () => {
       .then((data) => {
         if (data.result) {
           dispatch(updateWeight(newWeight));
+          console.log(newWeight);
+          const BMR = calculateBMR(newWeight, height, age, gender);
+          const TDEE = calculateTDEE(BMR, activityLevel);
+          console.log("fetch", BMR, TDEE);
+          return fetch(
+            `https://heaf-back-end.vercel.app/users/updateData/${token}`,
+            {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                BMR,
+                TDEE,
+              }),
+            }
+          );
+        } else {
+          throw new Error("Failed to update weight");
+        }
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result) {
+          console.log("fetching tdee et bmr : ", data.TDEE, data.BMR);
           setNewWeight("");
         }
+      })
+      .catch((error) => {
+        console.error("Error updating data:", error);
       });
+  };
+
+  const combinedSubmitHandler = (event) => {
+    handleSubmit(event);
   };
 
   const chartData = {
@@ -164,20 +181,32 @@ const LineChart = () => {
   };
 
   return (
-    <div style={{ width: "800px", height: "200px", margin: "0 auto" }}>
-      <Line data={chartData} options={options} />
-      <form onSubmit={handleSubmit} style={{ marginTop: "20px" }}>
-        <label>
+    <div className={styles.chartContainer}>
+      <form
+        className={styles.input}
+        onSubmit={combinedSubmitHandler}
+        style={{ marginTop: "20px" }}
+      >
+        <label className={styles.label}>
           Entrer votre nouvelle pesée(kg):
           <input
+            className={styles.inputform}
             type="number"
             value={newWeight}
             onChange={(e) => setNewWeight(e.target.value)}
             required
           />
         </label>
-        <button type="submit">Ajouter</button>
+        <button className={styles.btn} type="submit">
+          Ajouter
+        </button>
       </form>
+      <div
+        className={styles.graph}
+        style={{ width: "70%", height: "280px", marginLeft: "0 auto" }}
+      >
+        <Line data={chartData} options={options} />
+      </div>
     </div>
   );
 };

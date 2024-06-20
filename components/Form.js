@@ -14,7 +14,7 @@ function Form() {
   const [height, setHeight] = useState("");
   const [gender, setGender] = useState("");
   const [activityLevel, setActivityLevel] = useState(null);
-  const [objectif, setObjectif] = useState(null);
+  const [caloriesDeficit, setCaloriesDeficit] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
 
   const handleMouseEnter = () => {
@@ -36,7 +36,7 @@ function Form() {
   const handleActivityLevelChange = (event) =>
     setActivityLevel(Number(event.target.value));
   const handleObjectifChange = (event) =>
-    setObjectif(Number(event.target.value));
+    setCaloriesDeficit(Number(event.target.value));
   const token = useSelector((state) => state.user.value.token);
 
   const calculateBMR = (weight, height, age, gender) => {
@@ -49,6 +49,7 @@ function Form() {
   const calculateTDEE = (BMR, activityLevel) => {
     return BMR * activityLevel;
   };
+
   const handleSubmit = () => {
     const BMR = calculateBMR(weight, height, age, gender);
     const TDEE = calculateTDEE(BMR, activityLevel);
@@ -65,6 +66,7 @@ function Form() {
         height,
         gender,
         activityLevel,
+        caloriesDeficit,
         BMR,
         TDEE,
       }),
@@ -171,8 +173,8 @@ function Form() {
                     className={styles.checkbox}
                     type="radio"
                     name="activity"
-                    value="1.8"
-                    checked={activityLevel === 1.8}
+                    value="1.5"
+                    checked={activityLevel === 1.5}
                     onChange={handleActivityLevelChange}
                   />
                   Moderemment actif
@@ -184,8 +186,8 @@ function Form() {
                     className={styles.checkbox}
                     type="radio"
                     name="activity"
-                    value="2"
-                    checked={activityLevel === 2}
+                    value="1.6"
+                    checked={activityLevel === 1.6}
                     onChange={handleActivityLevelChange}
                   />
                   Actif
@@ -197,8 +199,8 @@ function Form() {
                     className={styles.checkbox}
                     type="radio"
                     name="activity"
-                    value="2.2"
-                    checked={activityLevel === 2.2}
+                    value="1.8"
+                    checked={activityLevel === 1.8}
                     onChange={handleActivityLevelChange}
                   />
                   Extremêment actif
@@ -240,9 +242,9 @@ function Form() {
                   <input
                     className={styles.checkbox}
                     type="radio"
-                    name="Objectif"
+                    name="caloriesDeficit"
                     value="-500"
-                    checked={objectif === -500}
+                    checked={caloriesDeficit === -500}
                     onChange={handleObjectifChange}
                   />
                   Perte de poids
@@ -253,9 +255,9 @@ function Form() {
                   <input
                     className={styles.checkbox}
                     type="radio"
-                    name="Objectif"
+                    name="caloriesDeficit"
                     value="500"
-                    checked={objectif === 500}
+                    checked={caloriesDeficit === 500}
                     onChange={handleObjectifChange}
                   />
                   Prise de muscle
@@ -266,9 +268,9 @@ function Form() {
                   <input
                     className={styles.checkbox}
                     type="radio"
-                    name="Objectif"
+                    name="caloriesDeficit"
                     value="0"
-                    checked={objectif === 0}
+                    checked={caloriesDeficit === 0}
                     onChange={handleObjectifChange}
                   />
                   Maintien

@@ -11,7 +11,8 @@ const initialState = {
     activityLevel: null,
     TDEE: null,
     BMR: null,
-    calories: null,
+    objectif: null,
+    caloriesDeficit: null,
   },
 };
 
@@ -33,7 +34,7 @@ export const userSlice = createSlice({
       state.value.activityLevel = action.payload.activityLevel;
       state.value.BMR = action.payload.BMR;
       state.value.TDEE = action.payload.TDEE;
-      state.value.calories = action.payload;
+      state.value.caloriesDeficit = action.payload.caloriesDeficit;
     },
     logout: (state) => {
       state.value.token = null;
@@ -47,17 +48,19 @@ export const userSlice = createSlice({
       state.value.activityLevel = action.payload.activityLevel;
       state.value.BMR = action.payload.BMR;
       state.value.TDEE = action.payload.TDEE;
+      state.value.caloriesDeficit = action.payload.caloriesDeficit;
     },
-    updateCalories: (state, action) => {
-      state.value.calories = action.payload;
-    },
+
     updateWeight: (state, action) => {
       state.value.weight = action.payload;
     },
     updateCaloriesData: (state, action) => {
       state.value.BMR = action.payload.BMR;
       state.value.TDEE = action.payload.TDEE;
-      state.value.calories = action.payload.calories;
+      state.value.caloriesDeficit = action.payload.caloriesDeficit;
+    },
+    updateObjectif: (state, action) => {
+      state.value.objectif = action.payload;
     },
   },
 });
@@ -66,9 +69,10 @@ export const {
   login,
   logout,
   updateData,
-  updateCalories,
+
   updateWeight,
   loginn,
   updateCaloriesData,
+  updateObjectif,
 } = userSlice.actions;
 export default userSlice.reducer;

@@ -22,6 +22,7 @@ function Login({ onToggleForm }) {
       .then((response) => response.json())
       .then((data) => {
         if (data.result) {
+          console.log(data);
           dispatch(
             loginn({
               pseudo: data.data.pseudo,
@@ -50,17 +51,23 @@ function Login({ onToggleForm }) {
         </div>
         <br></br>
         <div className={styles.subTitle}>
-          Votre partenaire de confiance pour un mode de vie équilibré.
+          Votre partenaire santé pour un mode de vie équilibré.
+          <br></br>
+          <br></br>
+          <div className={styles.gimmick}>
+            Calculez vos besoins nutrionionels, suivez nos recomandations
+            <br></br>
+            <br></br>
+            Observez-vous évoluer.
+          </div>
         </div>{" "}
         <div className={styles.subtitle}>
-          Découvrez nos programmes personnalisés pour atteindre vos objectifs de
-          santé et de bien-être durable.
-          <button className={styles.btnprog} onClick={toggleMenu}>
-            <FontAwesomeIcon
-              className={`${styles.icon} ${isMenuOpen ? styles.rotate : ""}`}
-              icon={faCircleChevronRight}
-            />
-          </button>
+          Découvrez nos programmes personnalisés.
+          <FontAwesomeIcon
+            onClick={toggleMenu}
+            className={`${styles.icon} ${isMenuOpen ? styles.rotate : ""}`}
+            icon={faCircleChevronRight}
+          />
           <div
             className={`${styles.dropdownMenu} ${
               isMenuOpen ? styles.show : ""
@@ -80,7 +87,7 @@ function Login({ onToggleForm }) {
           </div>
         </div>
       </div>
-
+      <div className={styles.space}></div>
       <div className={styles.log}>
         <div className={styles.menu}>
           {" "}

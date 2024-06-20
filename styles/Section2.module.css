@@ -12,9 +12,22 @@
     min-height: 100vh;
     width: 100%;
     top:0px;
-    background-image: url('/bg9.png');
+    background-image: url('/reversed.jpg');
     
     
   
   
+  }
+  .section1{
+    width: 100%;
+    height:10px;
+    background-color:#1C71A4;
+    top: 0%;
+    margin-bottom: 50px;
+    font-size: 30px;
+    color:#C5E9CD;
+letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }

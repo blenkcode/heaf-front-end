@@ -1,39 +1,43 @@
 .maincontainer{
   
 
-    background-color:#457894e9;
+
     height: 100%;
     color: #ffffff;
     border-radius: 10px;
+    padding: 5px;
+
 }
 
 .pseudo{
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
 }
 
 .data{
    
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    
     
 }
 
 .li{
 list-style: none;
-margin-bottom: 20px;
+margin-bottom: 30px;
 background-color:#fffdf7;
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
 padding-left: 10px;
 color:#000000;
 border-radius: 10px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-height: 70px;
+height: 50px;
+width: 100%;
 }
 
 .data{

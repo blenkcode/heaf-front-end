@@ -6,7 +6,7 @@ function Section2() {
   return (
     <div>
       <main className={styles.main}>
-        <div>Section2</div>
+        <div className={styles.section1}></div>
       </main>
     </div>
   );

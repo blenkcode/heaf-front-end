@@ -31,6 +31,9 @@ function Profil() {
             <div className={styles.profilMacro}>
               <ProfilMacro />
             </div>
+          </div>
+          <div className={styles.contentrightdown}>
+            {" "}
             <div className={styles.profilGraph}>
               <ProfilGraph />
             </div>
