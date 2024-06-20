@@ -29,8 +29,22 @@
   position: fixed;
   width: 100%;
 z-index: 20;
+top: 0; 
+transition:1s;
 }
+.headershow {
 
+transition:1s;
+top:-100px;
+position:fixed;
+width:100%;
+z-index: 20;
+/* background-color: #0F182A; */
+
+
+
+
+}
 
 
 .formcontainer{

@@ -6,7 +6,7 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Form from "./Form"; // Importer le composant Form
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function Home() {
   const [currentComponent, setCurrentComponent] = useState("SignUp");
@@ -18,7 +18,32 @@ function Home() {
   const handleSignUpSuccess = () => {
     setCurrentComponent("Form");
   };
+  const [head, setHead] = useState(false);
+  const footerRef = useRef(null);
+  let lastScroll = 0;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScroll) {
+        setHead(true);
+      } else {
+        setHead(false);
+      }
+      lastScroll = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const scrollToFooter = () => {
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <main
@@ -26,8 +51,8 @@ function Home() {
           currentComponent === "SignUp" ? styles.signup : styles.login
         }`}
       >
-        <div className={styles.headercontainer}>
-          <Header />
+        <div className={head ? styles.headershow : styles.headercontainer}>
+          <Header onClick={scrollToFooter} />
         </div>
 
         <div className={styles.formcontainer}>

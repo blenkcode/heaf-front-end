@@ -36,18 +36,20 @@ const LineChart = () => {
   const gender = useSelector((state) => state.user.value.gender);
   const activityLevel = useSelector((state) => state.user.value.activityLevel);
   const weight = useSelector((state) => state.user.value.weight);
-  const deficit = useSelector((state) => state.user.value.calories);
-  console.log("poids actuel:", weight);
 
   const calculateBMR = (weight, height, age, gender) => {
+    let BMR;
     if (gender === "male") {
-      return 10 * weight + 6.25 * height - 5 * age + 5;
+      BMR = 10 * weight + 6.25 * height - 5 * age + 5;
     } else {
-      return 10 * weight + 6.25 * height - 5 * age - 161;
+      BMR = 10 * weight + 6.25 * height - 5 * age - 161;
     }
+    return Math.round(BMR); // Arrondir à l'entier le plus proche
   };
+
   const calculateTDEE = (BMR, activityLevel) => {
-    return BMR * activityLevel;
+    const TDEE = BMR * activityLevel;
+    return Math.round(TDEE); // Arrondir à l'entier le plus proche
   };
   //récupération du poids modifié de la bdd
   useEffect(() => {
@@ -59,7 +61,13 @@ const LineChart = () => {
       .then((data) => {
         if (data.result) {
           // Extract dates and weights from the fetched data
-          const fetchedLabels = data.weights.map((entry) => entry.date);
+          const fetchedLabels = data.weights.map((entry) => {
+            const date = new Date(entry.date);
+            return date.toLocaleDateString("en-US", {
+              month: "2-digit",
+              day: "2-digit",
+            });
+          });
           const fetchedData = data.weights.map((entry) => entry.weight);
 
           // Update the state with fetched data
@@ -198,8 +206,9 @@ const LineChart = () => {
       <form
         className={styles.input}
         onSubmit={combinedSubmitHandler}
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "0px" }}
       >
+        <h4>Tracking Poids</h4>
         <label className={styles.label}>
           Entrer votre nouvelle pesée(kg):
           <input

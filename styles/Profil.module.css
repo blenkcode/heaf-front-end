@@ -1,12 +1,21 @@
+@font-face {
+  font-family: 'KumbhSans';
+  src: url('/fonts/KumbhSans-Regular.ttf') format('opentype');
+  font-weight: 300;
+}
+
+
+
+
 .main {
     display: flex;
     flex-direction: column;
-    
+    font-family: 'KumbhSans', sans-serif;
    
     min-height: 100vh;
     width: 100%;
     top:0px;
-    background-image: url('/bg6.jpeg');
+    background-image: url('/reversed.jpg');
     background-attachment: fixed; /* Ajoutez cette ligne */
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +30,6 @@
     width: 100%;
     
   }
-  
 
 
   .content{
@@ -102,6 +110,7 @@ justify-content: center;
 }
 .chartContainer{
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,15 +149,21 @@ transition: 1s;
 
 .input{
   width: 30%;
-  padding: 10px;
+
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px;
+  margin: 0px 0px 0px;
+  background: linear-gradient(to left, #1c70a400 1%, #1C71A4 85%);
+  border-radius: 20px;
+  margin-top: 0px;
 
   
 }
+
+
 
 .graph{
   width: 70%;
@@ -179,4 +194,48 @@ transition: 1s;
   
 }
 
+@media(max-width: 1541px) {
+
+  .profilData{
+    border-radius: 20px;
+ width: 80%;
+ margin-left: 15%;
+    background-color:#1c70a4c5;
+  
+  
+
+    
+  }
+
+ 
+.profilMacro{
+  background-color:#1c70a4c5;
+  border-radius: 20px;
+  width: 87%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+  ;
+}
+
+.profilGraph{
+  background-color:#1c70a4c5;
+  border-radius: 20px;
+  width: 87%;
+
+  
+}
+.content{
+  display: grid;
+  grid-template-columns: 33.5% 3% 63.5%;
+  grid-template-rows: 16.5% 31% 6% 31% 12.5%;
+
+  width: 100%;
+  height: 100vh;;
+
+
+
+}
+}
 

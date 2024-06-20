@@ -50,10 +50,10 @@ function ProfilMacro() {
       <div className={styles.macro}>
         <div className={styles.proteines}>
           <h3 className={styles.label}>
-            Protéines : <span className={styles.data}> {proteines} g</span>
+            Protéines (g): <span className={styles.data}> {proteines} </span>
           </h3>
           <div className={styles.imgcontainer}>
-            <img className={styles.image} src="./prot.jpeg" alt="Protéines" />
+            <img className={styles.image} src="./p.jpeg" alt="Protéines" />
             <div className={styles.overlay}>
               Les protéines sont essentielles pour la construction et la
               réparation des tissus, ainsi que pour le bon fonctionnement du
@@ -63,10 +63,10 @@ function ProfilMacro() {
         </div>
         <div className={styles.glucides}>
           <h3 className={styles.label}>
-            Glucides :<span className={styles.data}> {glucides} g</span>
+            Glucides (g):<span className={styles.data}> {glucides} </span>
           </h3>
           <div className={styles.imgcontainer}>
-            <img className={styles.image} src="./glu.jpeg" alt="Glucides" />
+            <img className={styles.image} src="./g.jpeg" alt="Glucides" />
             <div className={styles.overlay}>
               Les glucides fournissent l'énergie nécessaire pour le
               fonctionnement du corps et du cerveau.
@@ -75,10 +75,10 @@ function ProfilMacro() {
         </div>
         <div className={styles.lipides}>
           <h3 className={styles.label}>
-            Lipides : <span className={styles.data}>{lipides} g </span>
+            Lipides (g): <span className={styles.data}>{lipides} </span>
           </h3>
           <div className={styles.imgcontainer}>
-            <img className={styles.image} src="./lip.jpeg" alt="Lipides" />
+            <img className={styles.image} src="./l.jpeg" alt="Lipides" />
             <div className={styles.overlay}>
               Les lipides (ou graisses) sont indispensables pour l'absorption
               des vitamines, la production d'hormones et la protection des
@@ -90,6 +90,7 @@ function ProfilMacro() {
 
       <div className={styles.piechart}>
         {" "}
+        <h4 className={styles.h4}> Répartitions Macro-Nutriments</h4>
         <PieChart proteines={proteines} lipides={lipides} glucides={glucides} />
       </div>
     </div>

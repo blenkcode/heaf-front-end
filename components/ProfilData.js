@@ -73,21 +73,36 @@ function ProfilData() {
 
       <div className={styles.data}>
         <span className={styles.li}>
-          Poids actuel : <span className={styles.data}> {weight} Kg</span>
+          Poids actuel (Kg) :{" "}
+          <div>
+            <span className={styles.dataBox}> {weight} </span>
+          </div>
         </span>
         <span className={styles.li}>
-          Objectif journalier :{" "}
-          <span className={styles.data}> {objectif} kcal </span>
+          Objectif journalier (kcal) :{" "}
+          <div>
+            <span className={styles.dataBox}> {objectif} </span>
+          </div>
         </span>
         <span className={styles.li}>
-          Déficit / Surplus :{" "}
-          <span className={styles.data}> {caloriesDeficit} kcal</span>{" "}
+          Déficit / Surplus (kcal) :{" "}
+          <div>
+            {" "}
+            <span className={styles.dataBox}> {caloriesDeficit} </span>{" "}
+          </div>
         </span>
         <span className={styles.li}>
-          BMR :<span className={styles.data}>{BMR} kcal</span>{" "}
+          BMR (kcal) :
+          <div>
+            {" "}
+            <span className={styles.dataBox}>{BMR} </span>{" "}
+          </div>
         </span>
         <span className={styles.li}>
-          TDEE : <span className={styles.data}>{TDEE} kcal</span>
+          TDEE (kcal) :{" "}
+          <div>
+            <span className={styles.dataBox}>{TDEE} </span>
+          </div>
         </span>
       </div>
     </div>

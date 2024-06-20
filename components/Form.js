@@ -40,14 +40,18 @@ function Form() {
   const token = useSelector((state) => state.user.value.token);
 
   const calculateBMR = (weight, height, age, gender) => {
+    let BMR;
     if (gender === "male") {
-      return 10 * weight + 6.25 * height - 5 * age + 5;
+      BMR = 10 * weight + 6.25 * height - 5 * age + 5;
     } else {
-      return 10 * weight + 6.25 * height - 5 * age - 161;
+      BMR = 10 * weight + 6.25 * height - 5 * age - 161;
     }
+    return Math.round(BMR); // Arrondir à l'entier le plus proche
   };
+
   const calculateTDEE = (BMR, activityLevel) => {
-    return BMR * activityLevel;
+    const TDEE = BMR * activityLevel;
+    return Math.round(TDEE); // Arrondir à l'entier le plus proche
   };
 
   const handleSubmit = () => {
