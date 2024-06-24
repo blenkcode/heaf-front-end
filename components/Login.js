@@ -55,7 +55,7 @@ function Login({ onToggleForm }) {
           <br></br>
           <br></br>
           <div className={styles.gimmick}>
-            Calculez vos besoins nutrionionels, suivez nos recomandations
+            Calculez vos besoins nutritionnels, suivez nos recomandations
             <br></br>
             <br></br>
             Observez-vous évoluer.

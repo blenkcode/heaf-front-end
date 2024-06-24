@@ -74,5 +74,46 @@ padding:0;
     
 }
 
+@media (max-width: 500px) {
+
+  .list{
+    font-family: 'KumbhSans', sans-serif;
+      grid-row: 1 / 2;
+      grid-column: 2/ 3;
+      color: #fffefb;
+      display:flex;
+      align-items: center;
+     font-size: 15px;
+  margin:0;
+  padding:0;
+      width: 100%;
+      justify-content: space-around;
+      font-size: 11px;
+      list-style: none;
+     
+      
+      
+      
+  }
+
+  .logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-right: 15px;
+    cursor: pointer;
+   
+
+}
+.heaf{
+    font-size: 30px;
+    margin:0;
+    color:#ffffff;
+    font-weight: 300;
+    letter-spacing: 5px;;
+    cursor: pointer;
+}
+
+}
 
 

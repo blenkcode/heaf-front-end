@@ -9,12 +9,12 @@
   
     
 
-   
+   display: none;
     width: 100%;
     top:0px;
     height: 320px;
   background-color: #124660;
-    
+    width: 100%;
     
   
   
@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
 
-  
+  width: 100%;
     
   }
   
@@ -34,7 +34,7 @@ display: flex;
 justify-content: flex-start;
 
 flex-direction: column;
-width: 300px;
+width: 100px;
 margin: 50px;
 
   }
@@ -44,7 +44,7 @@ margin: 50px;
 justify-content: flex-start;
 
 flex-direction: column;
-width: 300px;
+width: 100px;
 margin: 50px;
 
   }
@@ -54,7 +54,7 @@ margin: 50px;
     justify-content: flex-start;
 
 flex-direction: column;
-width: 300px;
+width: 100px;
 margin: 50px;
 
   }
@@ -63,7 +63,7 @@ margin: 50px;
     justify-content: flex-start;
 
 flex-direction: column;
-width: 300px;
+width: 50px;
 margin: 50px;
 
   }
