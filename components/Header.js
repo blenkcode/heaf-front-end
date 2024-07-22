@@ -14,7 +14,7 @@ function Header({ onClick }) {
           <h1 className={styles.heaf}>Heaf</h1>
         </div>
         <ul className={styles.list}>
-          <li>Acceuil</li>
+          <li>Accueil</li>
           <li>Les Piliers Heaf</li>
           <li>Reviews</li>
           <li>Contact</li>
