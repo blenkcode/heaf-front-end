@@ -274,3 +274,54 @@ letter-spacing: 5px;
   display: block;
   margin-left: 30px;
 }
+
+@media (max-width: 1345px) {
+
+  .title{
+    font-size: 25px;
+    display: flex;
+    color: #1C71A4;
+    font-family: 'KumbhSans', sans-serif;
+    justify-content: flex-start;
+  }
+
+  .titleMain{
+    font-size: 35px;
+    display: flex;
+    color: #1C71A4;
+    font-family: 'KumbhSans', sans-serif;
+    justify-content:flex-end;
+    padding-right: 15%;
+    margin: 5px 0px 0px 0px;
+    
+    
+  }
+  .paragrapheContainer{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+ 
+    flex-direction: row;
+ 
+}
+  .paragraphe{
+    font-family: 'KumbhSans', sans-serif;
+    padding: 50px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 50px;
+    height:800px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.843);
+    border-bottom: solid #457894  1px;;
+    box-shadow: 15px 14px 20px 0px rgba(0, 0, 0, 0.167);
+  }
+
+  .cardsContainer{
+    display:grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100px 400px 400px 400px;
+    width: 100%;
+    
+  }
+}
