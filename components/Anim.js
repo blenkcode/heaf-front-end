@@ -3,7 +3,7 @@ import React from "react";
 
 function Anim() {
   return (
-    <div className="w-full h-auto">
+    <div className="w-full ">
       {" "}
       {/* Conteneur responsive */}
       <Spline
