@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
-const config = {
-  // Other config
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.optimization.innerGraph = false;
-    }
-    return config;
-  },
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: false, // Désactiver la minification pour tester
 };
+
+module.exports = nextConfig;
