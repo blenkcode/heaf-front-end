@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import styles from "../styles/Form.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { act, useState } from "react";

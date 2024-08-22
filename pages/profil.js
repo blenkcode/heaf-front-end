@@ -1,6 +1,3 @@
-import styles from "../styles/Profil.module.css";
-import HeaderLoged from "../components/HeaderLoged";
-
 import { useState } from "react";
 import ProfilData from "../components/ProfilData";
 import ProfilGraph from "../components/ProfilGraph";
