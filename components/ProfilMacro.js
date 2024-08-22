@@ -1,14 +1,9 @@
-import styles from "../styles/ProfilMacro.module.css";
-import Header from "./Header";
-import SignUp from "./SignUp";
-import Form from "./Form";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PieChart from "./PieChart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullseye, faDna } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import Anim2 from "./Anim2";
+
 function ProfilMacro() {
   const weight = useSelector((state) => state.user.value.weight);
   const caloriesDeficit = useSelector(
