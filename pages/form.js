@@ -1,10 +1,8 @@
-import styles from "../styles/Form.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { act, useState } from "react";
-import { updateData } from "../reducers/user";
+import { useState } from "react";
+
 import { useRouter } from "next/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+
 import Anim from "../components/Anim";
 import React from "react";
 function Form({}) {
@@ -16,15 +14,6 @@ function Form({}) {
   const [gender, setGender] = useState("");
   const [activityLevel, setActivityLevel] = useState(null);
   const [caloriesDeficit, setCaloriesDeficit] = useState(null);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowPopup(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowPopup(false);
-  };
 
   const handleAgeChange = (event) => setAge(event.target.value);
   const handleWeightChange = (event) => setWeight(event.target.value);

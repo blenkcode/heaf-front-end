@@ -2,8 +2,6 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
-import styles from "../styles/ProfilMacro.module.css";
-
 // Enregistrer les composants nécessaires de Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend);
 

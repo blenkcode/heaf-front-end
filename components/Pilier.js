@@ -1,7 +1,3 @@
-import styles from "../styles/Section1.module.css";
-
-import { useState } from "react";
-
 function Section1() {
   return (
     <div>

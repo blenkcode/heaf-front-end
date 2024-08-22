@@ -1,5 +1,3 @@
-import styles from "../styles/ProfilData.module.css";
-
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import {
@@ -7,7 +5,7 @@ import {
   updateObjectif,
   updateDataUpdated,
 } from "../reducers/user";
-import { useRouter } from "next/router";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBullseye,
@@ -15,7 +13,7 @@ import {
   faFire,
 } from "@fortawesome/free-solid-svg-icons";
 import Anim2 from "./Anim2";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 import React from "react";
 
 function ProfilData() {
