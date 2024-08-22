@@ -37,16 +37,16 @@ function Home({}) {
         </div>
         <div className="z-50 flex pt-10 sm:pt-0 xl:pt-10 sm:ml-10 xl:ml-0">
           {/* z-index le plus élevé pour SignUp/Login */}
-          {currentComponent === "SignUp" ? (
+          {/* {currentComponent === "SignUp" ? (
             <SignUp onToggleForm={toggleForm} />
           ) : (
             <Login onToggleForm={toggleForm} />
-          )}
+          )} */}
         </div>
       </div>
       <div className="w-fit h-fit z-20">
         {/* z-index élevé pour Anim */}
-        <Anim />
+        {/* <Anim /> */}
       </div>
     </main>
   );
