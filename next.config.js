@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: [],
+const config = {
+  // Other config
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.optimization.innerGraph = false;
+    }
+    return config;
   },
 };
-
-module.exports = nextConfig;

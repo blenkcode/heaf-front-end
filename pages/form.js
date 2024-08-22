@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Anim from "../components/Anim";
 import React from "react";
-function form({}) {
+function Form({}) {
   const dispatch = useDispatch();
   const router = useRouter();
   const [age, setAge] = useState("");
@@ -279,4 +279,4 @@ function form({}) {
   );
 }
 
-export default form;
+export default Form;

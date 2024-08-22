@@ -4,7 +4,7 @@ import ProfilGraph from "../components/ProfilGraph";
 import ProfilMacro from "../components/ProfilMacro";
 import { useRouter } from "next/router";
 import React from "react";
-function profil() {
+function Profil() {
   const router = useRouter();
   const handleExit = () => {
     router.push("/");
@@ -30,4 +30,4 @@ function profil() {
   );
 }
 
-export default profil;
+export default Profil;
