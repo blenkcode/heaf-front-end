@@ -1,8 +1,7 @@
 import Home from "../components/Home";
-import Profil from "./profil";
 
 function Index() {
-  return <Profil />;
+  return <Home />;
 }
 
 export default Index;
