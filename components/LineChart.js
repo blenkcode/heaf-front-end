@@ -12,7 +12,6 @@ import {
   Legend,
 } from "chart.js";
 import { updateWeight, updateDataUpdated } from "../reducers/user";
-import React from "react";
 
 // Enregistrer les composants nécessaires de Chart.js
 ChartJS.register(
