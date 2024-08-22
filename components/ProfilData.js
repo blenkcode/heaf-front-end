@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Anim2 from "./Anim2";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 
 function ProfilData() {
   const dispatch = useDispatch();

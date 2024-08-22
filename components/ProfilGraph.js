@@ -2,6 +2,7 @@ import styles from "../styles/ProfilGraph.module.css";
 
 import { useState } from "react";
 import LineChart from "./LineChart";
+import React from "react";
 
 function ProfilGraph() {
   return (

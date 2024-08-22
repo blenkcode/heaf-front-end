@@ -1,4 +1,5 @@
 import Spline from "@splinetool/react-spline";
+import React from "react";
 
 function Anim() {
   return (

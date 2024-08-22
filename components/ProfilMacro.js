@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import PieChart from "./PieChart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullseye, faDna } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 function ProfilMacro() {
   const weight = useSelector((state) => state.user.value.weight);

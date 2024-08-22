@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Anim from "./Anim";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
+import React from "react";
 function Home({}) {
   const [currentComponent, setCurrentComponent] = useState("SignUp");
 

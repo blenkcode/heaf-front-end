@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Anim from "../components/Anim";
+import React from "react";
 function form({}) {
   const dispatch = useDispatch();
   const router = useRouter();
