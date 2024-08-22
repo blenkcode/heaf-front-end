@@ -5,42 +5,30 @@ import { useState } from "react";
 import ProfilData from "../components/ProfilData";
 import ProfilGraph from "../components/ProfilGraph";
 import ProfilMacro from "../components/ProfilMacro";
-
+import { useRouter } from "next/router";
 function Profil() {
-  const [showSignUp, setShowSignUp] = useState(true);
-
-  const handleSignUpSuccess = () => {
-    setShowSignUp(false);
+  const router = useRouter();
+  const handleExit = () => {
+    router.push("/");
   };
   return (
-    <div>
-      <main className={styles.main}>
-        <div className={styles.headercontainer}>
+    <main className="h-lvh bg-gradient-to-tr from-sky-600 to-sky-900 flex flex-col xl:flex-row justify-evenly items-center relative ">
+      <div className=" w-10/12 h-auto  ">
+        {" "}
+        <ProfilData />
+        <div className="flex">
           {" "}
-          <HeaderLoged />
+          <ProfilMacro />
+          <ProfilGraph />
         </div>
-
-        <div className={styles.content}>
-          <div className={styles.contentleft}>
-            <div className={styles.profilData}>
-              <ProfilData />
-            </div>
-          </div>
-
-          <div className={styles.contentright}>
-            <div className={styles.profilMacro}>
-              <ProfilMacro />
-            </div>
-          </div>
-          <div className={styles.contentrightdown}>
-            {" "}
-            <div className={styles.profilGraph}>
-              <ProfilGraph />
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+      </div>
+      <div
+        className="absolute top-10 text-xl  text-slate-200 border-1 border-slate-200 border-opacity-85 rounded-full cursor-pointer hover:bg-sky-800 p-4 right-10"
+        onClick={handleExit}
+      >
+        Exit
+      </div>
+    </main>
   );
 }
 

@@ -8,6 +8,14 @@ import {
   updateDataUpdated,
 } from "../reducers/user";
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBullseye,
+  faWeightScale,
+  faFire,
+} from "@fortawesome/free-solid-svg-icons";
+import Anim2 from "./Anim2";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function ProfilData() {
   const dispatch = useDispatch();
@@ -68,42 +76,52 @@ function ProfilData() {
   // }, [token, dispatch]);
 
   return (
-    <div className={styles.maincontainer}>
-      <div className={styles.pseudo}>{pseudo} :</div>
+    <div className="bg-sky-900 flex items-center w-full text-slate-200 p-10 relative mb-5 rounded-xl">
+      <div className=" w-11/12">
+        <div className="text-2xl mb-8">{pseudo}</div>
+        <div className=" flex w-full">
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  hover:bg-sky-800 transition-colors  w-60 h-fit  mr-8 flex-col items-start py-2 pl-4">
+            <div className="flex justify-between w-full pr-2">
+              Poids <FontAwesomeIcon className="p-1" icon={faWeightScale} />
+            </div>{" "}
+            <span className="text-3xl mt-2">
+              {" "}
+              {weight} <span className="text-2xl">Kg</span>{" "}
+            </span>
+          </span>
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-60 h-fit hover:bg-sky-800 transition-colors  mr-8 flex-col items-start py-2 pl-4">
+            <div className="flex justify-between w-full pr-2">
+              Objectif <FontAwesomeIcon className="p-1" icon={faBullseye} />
+            </div>{" "}
+            <span className="text-3xl mt-2">
+              {" "}
+              {objectif} <span className="text-2xl">Kcal</span>{" "}
+            </span>
+          </span>
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-60 h-fit hover:bg-sky-800 transition-colors  mr-8 flex-col items-start py-2 pl-4">
+            <div className="flex justify-between w-full pr-2">
+              BMR <FontAwesomeIcon className="p-1" icon={faFire} />
+            </div>{" "}
+            <span className="text-3xl mt-2">
+              {" "}
+              {BMR} <span className="text-2xl">Kcal</span>{" "}
+            </span>
+          </span>
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-60 h-fit hover:bg-sky-800 transition-colors   mr-8 flex-col items-start py-2 pl-4">
+            <div className="flex justify-between w-full pr-2">
+              TDEE <FontAwesomeIcon className="p-1" icon={faFire} />
+            </div>{" "}
+            <span className="text-3xl mt-2">
+              {" "}
+              {TDEE} <span className="text-2xl">Kcal</span>{" "}
+            </span>
+          </span>
+        </div>
+      </div>
 
-      <div className={styles.data}>
-        <span className={styles.li}>
-          Poids actuel (Kg) :{" "}
-          <div>
-            <span className={styles.dataBox}> {weight} </span>
-          </div>
-        </span>
-        <span className={styles.li}>
-          Objectif journalier (kcal) :{" "}
-          <div>
-            <span className={styles.dataBox}> {objectif} </span>
-          </div>
-        </span>
-        <span className={styles.li}>
-          Déficit / Surplus (kcal) :{" "}
-          <div>
-            {" "}
-            <span className={styles.dataBox}> {caloriesDeficit} </span>{" "}
-          </div>
-        </span>
-        <span className={styles.li}>
-          BMR (kcal) :
-          <div>
-            {" "}
-            <span className={styles.dataBox}>{BMR} </span>{" "}
-          </div>
-        </span>
-        <span className={styles.li}>
-          TDEE (kcal) :{" "}
-          <div>
-            <span className={styles.dataBox}>{TDEE} </span>
-          </div>
-        </span>
+      <div className="w-1/12 flex items-center ">
+        {" "}
+        <Anim2></Anim2>
       </div>
     </div>
   );

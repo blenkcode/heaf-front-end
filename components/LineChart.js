@@ -202,33 +202,32 @@ const LineChart = () => {
   };
 
   return (
-    <div className={styles.chartContainer}>
+    <div className="w-full h-full flex-col items-start justify-center text-slate-200">
+      <h4 className="text-2xl mt-8 pl-10 mb-8">Tracking du poids</h4>
+      <div className="w-11/12 pl-10 h-64">
+        <Line data={chartData} options={options} />
+      </div>
       <form
-        className={styles.input}
+        className="pl-10 pt-5 flex justify-evenly"
         onSubmit={combinedSubmitHandler}
-        style={{ marginTop: "0px" }}
       >
-        <h4>Tracking Poids</h4>
-        <label className={styles.label}>
-          Entrer votre nouvelle pesée(kg):
+        <label className="">
+          Nouvelle pesée(kg):
           <input
-            className={styles.inputform}
+            className="px-5 py-4 text-slate-200 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70 w-1/4 ml-5 mr-5"
             type="number"
             value={newWeight}
             onChange={(e) => setNewWeight(e.target.value)}
             required
           />
+          <button
+            className="py-2 w-1/4 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 mr-5 border-opacity-90 hover:bg-sky-800 transition-colors "
+            type="submit"
+          >
+            Ajouter
+          </button>
         </label>
-        <button className={styles.btn} type="submit">
-          Ajouter
-        </button>
       </form>
-      <div
-        className={styles.graph}
-        style={{ width: "70%", height: "280px", marginLeft: "0 auto" }}
-      >
-        <Line data={chartData} options={options} />
-      </div>
     </div>
   );
 };
