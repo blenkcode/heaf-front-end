@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import Anim from "../components/Anim";
-function Home({}) {
+function form({}) {
   const dispatch = useDispatch();
   const router = useRouter();
   const [age, setAge] = useState("");
@@ -278,4 +278,4 @@ function Home({}) {
   );
 }
 
-export default Home;
+export default form;
