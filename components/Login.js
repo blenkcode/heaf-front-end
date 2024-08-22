@@ -1,17 +1,13 @@
-import styles from "../styles/SignUp.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { loginn } from "../reducers/user";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function Login({ onToggleForm }) {
   const dispatch = useDispatch();
   const router = useRouter();
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleConnexion = () => {
     fetch("https://heaf-back-end.vercel.app/users/signin", {
@@ -37,9 +33,6 @@ function Login({ onToggleForm }) {
           router.push("/profil");
         }
       });
-  };
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
   };
 
   return (

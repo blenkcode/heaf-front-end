@@ -1,9 +1,7 @@
-import styles from "../styles/SignUp.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/user";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
+
 import { useRouter } from "next/router";
 
 function SignUp({ onToggleForm }) {
@@ -17,7 +15,6 @@ function SignUp({ onToggleForm }) {
   const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleRegister = () => {
     if (!EMAIL_REGEX.test(email)) {
@@ -42,9 +39,7 @@ function SignUp({ onToggleForm }) {
         }
       });
   };
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+
   const handlePseudoClick = () => {
     setUserError(false);
     setEmailError(false);

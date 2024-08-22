@@ -5,11 +5,11 @@ function Anim() {
     <div className="w-full h-auto">
       {" "}
       {/* Conteneur responsive */}
-      {/* <Spline
+      <Spline
         scene="https://prod.spline.design/5wAMHQgZEspSGyGg/scene.splinecode"
         width={1123}
         height={905}
-      /> */}
+      />
     </div>
   );
 }

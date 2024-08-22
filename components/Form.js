@@ -1,7 +1,7 @@
 import styles from "../styles/Form.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { act, useState } from "react";
-import { updateData } from "../reducers/user";
+import { useState } from "react";
+
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";

@@ -12,7 +12,6 @@ import {
   Legend,
 } from "chart.js";
 import { updateWeight, updateDataUpdated } from "../reducers/user";
-import styles from "../styles/Profil.module.css";
 
 // Enregistrer les composants nécessaires de Chart.js
 ChartJS.register(
