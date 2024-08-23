@@ -3,3 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-image: linear-gradient(to top right, #0284c7, #0c4a6e);/* Exemple : couleur similaire à celle de votre fond */
+  }

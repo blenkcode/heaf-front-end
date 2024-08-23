@@ -9,8 +9,13 @@ module.exports = {
     extend: {
       animation: {
         "rotate-y": "rotateY 10s infinite linear",
+        spin: "spin 1s linear infinite",
       },
       keyframes: {
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
         rotateY: {
           "0%": { transform: "rotateY(0deg)" },
           "100%": { transform: "rotateY(360deg)" },
