@@ -9,13 +9,13 @@ body {
 
   .bg-diagonal-split {
     @apply bg-gradient-to-tr from-sky-800 to-slate-200;
-    background-image: linear-gradient(50deg, #27548a 55%, #ffffff 50%), url('/h1.png');
+    background-image: linear-gradient(50deg, #27548a 55%, #ffffff 55%, #ffffff 50%, #27548a 100%);
     background-size: cover;
     background-position: center;
   }
   .bg-diagonal-split2 {
     @apply bg-gradient-to-tr from-sky-800 to-slate-200;
-    background-image: linear-gradient(60deg, #ffffff 60%, #152e4c  50%), url('/h1.png');
+    background-image: linear-gradient(50deg, #27548a 55%, #ffffff 55%, #ffffff 50%, #27548a 100%);
     background-size: cover;
     background-position: center;
   }
