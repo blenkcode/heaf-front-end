@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Loader from "./Loader"; // Importer le composant Loader
 import React from "react";
-
+import Header from "./Header";
 function Home({}) {
   const [currentComponent, setCurrentComponent] = useState("SignUp");
   const [isLoading, setIsLoading] = useState(true);
@@ -37,14 +37,15 @@ function Home({}) {
           isLoading ? "opacity-0" : "opacity-100"
         }`}
       >
-        <main className="h-lvh bg-gradient-to-tr from-sky-600 to-sky-900 flex flex-col xl:flex-row justify-evenly items-center relative overflow-hidden">
-          <div className="flex flex-col sm:flex-row xl:flex-col relative xl:items-start items-center xl-w-fit justify-around z-10 xl:ml-10 ml-0 2xl:ml-0 pt-10 sm:pt-12 xl:pt-0">
+        <main className="h-lvh bg-diagonal-split flex flex-col xl:flex-row justify-evenly items-center relative overflow-hidden">
+          <Header></Header>
+          <div className="flex flex-col sm:flex-row xl:flex-col relative xl:items-start items-center xl-w-fit justify-around z-10 xl:ml-10 ml-0 2xl:ml-0 pt-24 sm:pt-12 xl:pt-0">
             <div className="xl:w-full w-full sm:w-1/2">
               <h1 className="text-7xl flex items-center text-slate-100 font-bold">
                 Heaf{" "}
                 <a
                   href="https://www.valentin-mor.com/"
-                  className="text-slate-200 border-1 border-opacity-55 px-6 py-3 rounded-xl border-slate-300 cursor-pointer hover:bg-sky-800 text-base transition-colors ml-10"
+                  className="text-slate-200 border-1 border-opacity-55 px-6 py-3 rounded-xl border-slate-300 cursor-pointer hover:bg-customBlue2 text-base transition-colors ml-10"
                 >
                   Contact
                 </a>

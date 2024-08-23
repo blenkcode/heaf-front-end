@@ -220,7 +220,7 @@ const LineChart = () => {
             required
           />
           <button
-            className="py-2 w-1/4 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 mr-5 border-opacity-90 hover:bg-sky-800 transition-colors "
+            className="py-2 w-1/4 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 mr-5 border-opacity-90  hover:bg-customBlue2 transition-colors "
             type="submit"
           >
             Ajouter

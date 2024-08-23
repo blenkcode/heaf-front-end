@@ -69,7 +69,7 @@ function ProfilMacro() {
   };
 
   return (
-    <div className="text-slate-200 w-1/2  bg-sky-900  pl-10 rounded-xl">
+    <div className="text-slate-200 w-1/2  bg-customBlue3  pl-10 rounded-xl">
       <div className="flex-col">
         <div className="text-2xl mb-8 mt-8 ">Macro-Nutriments</div>
         <div className="flex">
@@ -77,7 +77,7 @@ function ProfilMacro() {
           <div className="w-1/2">
             <span
               onClick={handleProt}
-              className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-10/12 hover:bg-sky-800 transition-colors  mr-8 flex-col items-start py-2 pl-4 mb-8"
+              className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-10/12  hover:bg-customBlue2 transition-colors  mr-8 flex-col items-start py-2 pl-4 mb-8 cursor-pointer"
             >
               <div className="flex justify-between w-full pr-2">
                 Protéines <FontAwesomeIcon className="p-1" icon={faDna} />
@@ -89,7 +89,7 @@ function ProfilMacro() {
             </span>
             <span
               onClick={handleGlu}
-              className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  w-10/12  mr-8 flex-col hover:bg-sky-800 transition-colors  items-start py-2 pl-4 mb-8"
+              className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  w-10/12  mr-8 flex-col  hover:bg-customBlue2 transition-colors  items-start py-2 pl-4 mb-8 cursor-pointer"
             >
               <div className="flex justify-between w-full pr-2">
                 Glucides <FontAwesomeIcon className="p-1" icon={faDna} />
@@ -101,7 +101,7 @@ function ProfilMacro() {
             </span>
             <span
               onClick={handleLip}
-              className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center w-10/12   mr-8 flex-col hover:bg-sky-800 transition-colors  items-start py-2 pl-4 mb-8"
+              className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center w-10/12   mr-8 flex-col  hover:bg-customBlue2 transition-colors  items-start py-2 pl-4 mb-8 cursor-pointer"
             >
               <div className="flex justify-between w-full pr-2">
                 Lipides

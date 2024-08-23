@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        customBlue: "#27548a",
+        customBlue2: "#2e6bb6 ",
+        customBlue3: "#152e4c ",
+      },
       animation: {
         "rotate-y": "rotateY 10s infinite linear",
         spin: "spin 1s linear infinite",

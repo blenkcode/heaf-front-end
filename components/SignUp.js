@@ -84,7 +84,7 @@ function SignUp({ onToggleForm }) {
         </div>
         <div className=" flex justify-start items-center">
           <button
-            className="px-8 py-2 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 border-opacity-90 hover:bg-sky-800 transition-colors "
+            className="px-8 py-2 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 border-opacity-90 hover:bg-customBlue2 transition-colors "
             onClick={handleRegister}
           >
             Inscription

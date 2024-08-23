@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-
+import Header from "../components/Header";
 import { useRouter } from "next/router";
 
 import Anim from "../components/Anim";
@@ -75,9 +75,10 @@ function Form({}) {
   const pseudo = useSelector((state) => state.user.value.pseudo);
   console.log(pseudo);
   return (
-    <main className="h-auto min-h-lvh text-slate-200 bg-gradient-to-br from-sky-600 to-sky-900 flex flex-col xl:flex-row justify-evenly items-center relative overflow-x-hidden ">
-      <div className=" w-full xl:w-1/2 h-full pl-12 lg:pl-32 ">
-        <div className="w-full mb-12 2xl:mt-0 mt-16 h-auto flex flex-col justify-center items-start pt-0 pb-10  ">
+    <main className="h-auto min-h-lvh text-slate-200 bg-diagonal-split2  flex flex-col xl:flex-row justify-evenly items-center relative overflow-x-hidden ">
+      <Header></Header>
+      <div className=" w-full xl:w-1/2 h-full pl-12 lg:pl-32 pt-12 xl:pt-0 ">
+        <div className="w-full mb-12 2xl:mt-0 mt-16 h-auto flex flex-col justify-center items-start pt-0 2xl:pb-10  ">
           <div className="text-6xl  font-bold ">
             Hello <span className="text-6xl  font-normal ">{pseudo}</span>!
           </div>
@@ -255,7 +256,7 @@ function Form({}) {
         </div>
         <button
           onClick={() => handleSubmit()}
-          className="mt-10 px-8 py-2 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 border-opacity-90 hover:bg-sky-800 transition-colors "
+          className="mt-10 px-8 py-2 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 border-opacity-90 hover:bg-customBlue2 transition-colors "
         >
           Suivant
         </button>

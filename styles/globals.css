@@ -4,5 +4,33 @@
 @tailwind utilities;
 
 body {
-    background-image: linear-gradient(to top right, #0284c7, #0c4a6e);/* Exemple : couleur similaire à celle de votre fond */
+    background-color:  #27548a;/* Exemple : couleur similaire à celle de votre fond */
+  }
+
+  .bg-diagonal-split {
+    @apply bg-gradient-to-tr from-sky-800 to-slate-200;
+    background-image: linear-gradient(50deg, #27548a 55%, #152e4c 50%), url('/h1.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-diagonal-split2 {
+    @apply bg-gradient-to-tr from-sky-800 to-slate-200;
+    background-image: linear-gradient(60deg, #27548a 60%, #152e4c  50%), url('/h1.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-width: 1280px) {
+    .bg-diagonal-split {
+        @apply bg-gradient-to-tr from-sky-800 to-slate-200;
+        background-image: linear-gradient( #27548a 100%, rgb(255, 255, 255) 50%), url('/h1.png');
+        background-size: cover;
+        background-position: center;
+      }
+      .bg-diagonal-split2 {
+        @apply bg-gradient-to-tr from-sky-800 to-slate-200;
+        background-image: linear-gradient( #27548a 100%, rgb(255, 255, 255) 50%), url('/h1.png');
+        background-size: cover;
+        background-position: center;
+      }
   }
