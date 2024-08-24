@@ -3,11 +3,11 @@ import React from "react";
 
 export default function Anim2() {
   return (
-    <div className="">
+    <div className=" w-full flex justify-center items-center">
       <Spline
-        scene="https://prod.spline.design/2iAbeMFCYX4GCLll/scene.splinecode"
-        width={132}
-        height={229}
+        scene="https://prod.spline.design/H7PfIh9T7ePYeVd1/scene.splinecode"
+        width={307}
+        height={306}
       />
     </div>
   );

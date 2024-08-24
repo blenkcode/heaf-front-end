@@ -4,6 +4,7 @@ import PieChart from "./PieChart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullseye, faDna } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import Anim2 from "./Anim2";
 
 function ProfilMacro() {
   const weight = useSelector((state) => state.user.value.weight);
@@ -69,10 +70,10 @@ function ProfilMacro() {
   };
 
   return (
-    <div className="text-slate-200 w-1/2  bg-customBlue3  pl-10 rounded-xl">
+    <div className="text-slate-200 w-1/2  bg-sky-900  pl-10 rounded-xl ">
       <div className="flex-col">
         <div className="text-2xl mb-8 mt-8 ">Macro-Nutriments</div>
-        <div className="flex">
+        <div className="flex ">
           {" "}
           <div className="w-1/2">
             <span
@@ -113,34 +114,41 @@ function ProfilMacro() {
               </span>
             </span>
           </div>
-          <div className="w-1/2 mr-10 h-80  border-1 border-slate-200 border-opacity-40 text-base  rounded-xl">
-            {overlay && (
-              <div className="p-5">
-                Les macronutriments sont les nutriments essentiels dont notre
-                corps a besoin en grande quantité pour fonctionner correctement.
-              </div>
-            )}
-            {prot && (
-              <div className="p-5">
-                Les protéines sont essentielles pour la construction et la
-                réparation des tissus, ainsi que pour le bon fonctionnement du
-                système immunitaire.
-              </div>
-            )}
-            {glu && (
-              <div className="p-5">
-                Les glucides fournissent l'énergie nécessaire pour le
-                fonctionnement du corps et du cerveau, ce sont vos meilleurs
-                amis pour l'entrainement.
-              </div>
-            )}
-            {lip && (
-              <div className="p-5">
-                Les lipides (ou graisses) sont indispensables pour l'absorption
-                des vitamines, la production d'hormones et la protection des
-                organes.
-              </div>
-            )}
+          <div className="w-1/2 flex  items-center flex-col justify-end relative">
+            <div className="absolute -translate-x-5 -top-10">
+              {" "}
+              <Anim2></Anim2>
+            </div>{" "}
+            <div className="w-full mr-10 h-48 mb-8   border-1 border-slate-200 border-opacity-40 text-base  rounded-xl">
+              {overlay && (
+                <div className="p-5">
+                  Les macronutriments sont les nutriments essentiels dont notre
+                  corps a besoin en grande quantité pour fonctionner
+                  correctement.
+                </div>
+              )}
+              {prot && (
+                <div className="p-5">
+                  Les protéines sont essentielles pour la construction et la
+                  réparation des tissus, ainsi que pour le bon fonctionnement du
+                  système immunitaire.
+                </div>
+              )}
+              {glu && (
+                <div className="p-5">
+                  Les glucides fournissent l'énergie nécessaire pour le
+                  fonctionnement du corps et du cerveau, ce sont vos meilleurs
+                  amis pour l'entrainement.
+                </div>
+              )}
+              {lip && (
+                <div className="p-5">
+                  Les lipides (ou graisses) sont indispensables pour
+                  l'absorption des vitamines, la production d'hormones et la
+                  protection des organes.
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -11,10 +11,12 @@ function Profil() {
     router.push("/");
   };
   return (
-    <main className="h-lvh bg-customBlue from-sky-600 to-sky-900 flex flex-col xl:flex-row justify-evenly items-center relative ">
+    <main className="h-lvh bg-diagonal-split flex flex-col xl:flex-row justify-evenly items-center relative ">
       <Header></Header>
       <div className=" w-10/12 h-auto pt-12  ">
-        {" "}
+        <div className="text-3xl pb-12 ml-3 text-sky-900 font-bold">
+          DashBoard
+        </div>{" "}
         <ProfilData />
         <div className="flex">
           {" "}

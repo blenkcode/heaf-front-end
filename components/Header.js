@@ -11,7 +11,7 @@ function Header() {
     router.push("/");
   };
   return (
-    <div className=" absolute bg-customBlue top-0 border-b-1 border-solid text-slate-200 border-slate-200 w-full h-16 flex items-center justify-end">
+    <div className=" absolute bg-sky-900 top-0 border-b-1 border-solid text-slate-200 border-slate-200 w-full h-16 flex items-center justify-end">
       <div className="flex md:w-2/3 w-full lg:w-1/3 h-full items-center justify-between px-12">
         <div
           onClick={handleHome}

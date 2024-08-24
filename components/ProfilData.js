@@ -75,7 +75,7 @@ function ProfilData() {
   // }, [token, dispatch]);
 
   return (
-    <div className="bg-customBlue3  flex items-center w-full text-slate-200 p-10 relative mb-5 rounded-xl">
+    <div className="bg-sky-900  flex items-center w-full text-slate-200 p-10 relative mb-5 rounded-xl">
       <div className=" w-11/12">
         <div className="text-2xl mb-8">{pseudo}</div>
         <div className=" flex w-full">
@@ -116,11 +116,6 @@ function ProfilData() {
             </span>
           </span>
         </div>
-      </div>
-
-      <div className="w-1/12 flex items-center ">
-        {" "}
-        <Anim2></Anim2>
       </div>
     </div>
   );

@@ -46,12 +46,12 @@ function SignUp({ onToggleForm }) {
     setEmailError(false);
   };
   return (
-    <div className=" w-full h-full  bg-opacity-35  flex flex-col pt-8    ">
+    <div className=" w-full h-full  bg-opacity-35  text-sky-900 flex flex-col pt-8    ">
       <div className="text-black text-xl flex-col   w-full ">
-        <div className="mb-10 flex flex-col justify-around text-slate-200">
+        <div className="mb-10 flex flex-col justify-around ">
           {" "}
           <input
-            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70 w-80"
+            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900  border-opacity-100 w-80"
             type="text"
             placeholder="Pseudo"
             value={pseudo}
@@ -63,7 +63,7 @@ function SignUp({ onToggleForm }) {
         <div className="mb-10 flex flex-col justify-around">
           {" "}
           <input
-            className="px-5 py-4 text-slate-200 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70 w-80"
+            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900 border-opacity-100 w-80"
             type="text"
             placeholder="johndoe@gmail.com"
             value={email}
@@ -75,7 +75,7 @@ function SignUp({ onToggleForm }) {
         <div className="mb-10 flex flex-col justify-around">
           {" "}
           <input
-            className="px-5 py-4  sm:py-2 text-slate-200 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70 w-80"
+            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900 border-opacity-100 w-80"
             type="password"
             value={password}
             placeholder="Mot de passe"
@@ -84,14 +84,14 @@ function SignUp({ onToggleForm }) {
         </div>
         <div className=" flex justify-start items-center">
           <button
-            className="px-8 py-2 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 border-opacity-90 hover:bg-customBlue2 transition-colors "
+            className="px-8 py-2 rounded-xl bg-opacity-80 text-sky-900  border-1 border-sky-900 border-opacity-90 hover:bg-sky-900 hover:border-slate-200 hover:text-slate-200 transition-colors "
             onClick={handleRegister}
           >
             Inscription
           </button>
           <div
             onClick={onToggleForm}
-            className="text-slate-200 text-base ml-8 cursor-pointer"
+            className=" text-base ml-8 text-sky-900 cursor-pointer"
           >
             Déjà un compte ?
           </div>

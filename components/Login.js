@@ -42,15 +42,15 @@ function Login({ onToggleForm }) {
         <div className="mb-10 flex flex-col justify-around text-slate-200">
           {" "}
           <input
-            className="px-5 py-4  w-80 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-0 opacity-0"
+            className="px-5 py-4  w-80 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-text-sky-900 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-0 opacity-0"
             type="text"
             placeholder="Pseudo"
           />
         </div>
-        <div className="mb-10 flex flex-col justify-around text-slate-200">
+        <div className="mb-10 flex flex-col justify-around text-sky-900">
           {" "}
           <input
-            className="px-5 py-4  w-80 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70"
+            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900  border-opacity-100 w-80"
             type="text"
             placeholder="Pseudo"
             value={pseudo}
@@ -61,7 +61,7 @@ function Login({ onToggleForm }) {
         <div className="mb-10 flex flex-col justify-around w-80">
           {" "}
           <input
-            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70"
+            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900  border-opacity-100 w-80"
             type="password"
             value={password}
             placeholder="Mot de passe"
@@ -70,14 +70,14 @@ function Login({ onToggleForm }) {
         </div>
         <div className=" flex justify-start items-center ">
           <button
-            className="px-8 py-2 rounded-xl bg-opacity-80  text-zinc-100 border-1 border-zinc-200 border-opacity-90 hover:bg-sky-800 transition-colors "
+            className="px-8 py-2 rounded-xl bg-opacity-80 text-sky-900  border-1 border-sky-900 border-opacity-90  hover:bg-sky-900 hover:border-slate-200 hover:text-slate-200 transition-colors "
             onClick={handleConnexion}
           >
             Connexion
           </button>
           <div
             onClick={onToggleForm}
-            className="text-slate-200 text-base ml-10 cursor-pointer"
+            className="text-sky-900 text-base ml-10 cursor-pointer"
           >
             Premiere fois ?
           </div>

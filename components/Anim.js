@@ -10,12 +10,12 @@ function Anim({ onLoad }) {
   };
 
   return (
-    <div className="w-full">
+    <div className="">
       <Spline
-        scene="https://prod.spline.design/5wAMHQgZEspSGyGg/scene.splinecode"
+        scene="https://prod.spline.design/iTuhOir4R10EAZrO/scene.splinecode"
         onLoad={handleLoad}
-        width={804}
-        height={559}
+        width={844}
+        height={907}
       />
     </div>
   );
