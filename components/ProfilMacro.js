@@ -70,12 +70,12 @@ function ProfilMacro() {
   };
 
   return (
-    <div className="text-slate-200 w-1/2  bg-sky-900  pl-10 rounded-xl ">
+    <div className="text-slate-200 lg:w-1/2 w-full bg-sky-900  pl-10 rounded-xl ">
       <div className="flex-col">
         <div className="text-2xl mb-8 mt-8 ">Macro-Nutriments</div>
-        <div className="flex ">
+        <div className="flex lg:flex-row flex-col">
           {" "}
-          <div className="w-1/2">
+          <div className="lg:w-1/2 w-full">
             <span
               onClick={handleProt}
               className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-10/12  hover:bg-customBlue2 transition-colors  mr-8 flex-col items-start py-2 pl-4 mb-8 cursor-pointer"
@@ -114,8 +114,8 @@ function ProfilMacro() {
               </span>
             </span>
           </div>
-          <div className="w-1/2 flex  items-center flex-col justify-end relative">
-            <div className="absolute -translate-x-5 -top-10">
+          <div className="lg:w-1/2 flex lg:mt-0 mt-48 items-center flex-col justify-end relative">
+            <div className="absolute lg:-translate-x-5 -translate-x-7 lg:-top-10 -top-48">
               {" "}
               <Anim2></Anim2>
             </div>{" "}

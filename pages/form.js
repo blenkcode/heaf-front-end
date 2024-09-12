@@ -83,7 +83,7 @@ function Form({}) {
   return (
     <main className="h-auto min-h-lvh text-sky-900 bg-diagonal-split  flex flex-col xl:flex-row justify-evenly items-center relative overflow-x-hidden ">
       <Header></Header>
-      <div className=" w-full xl:w-1/2 h-full pl-12 lg:pl-32 pt-12 xl:pt-0 ">
+      <div className=" w-full xl:w-1/2 h-full px-5 lg:pl-32 pt-12 xl:pt-0 ">
         <div className="w-full mb-12 2xl:mt-0 mt-16 h-auto flex flex-col justify-center items-start pt-0 2xl:pb-10  ">
           <div className="text-6xl  font-bold ">
             Hello <span className="text-6xl  font-normal ">{pseudo}</span>!
@@ -99,7 +99,7 @@ function Form({}) {
         <div className="flex flex-col 2xl:flex-row xl:flex-col lg:flex-row w-full ">
           {" "}
           <div className=" w-fit h-auto flex flex-col justify-center items-start ">
-            <div className="w-80  ">
+            <div className="lg:w-80 w-full ">
               <div className=" flex justify-between items-start mb-6">
                 <span className="text-xl ">Âge :</span>
                 <input
@@ -156,12 +156,14 @@ function Form({}) {
               </div>
             </div>
           </div>
-          <div className=" flex 2xl:flex-col items-start justify-start 2xl:pl-24 pl-0 xl:mt-0 lg:ml-24 xl:ml-0 w-96 ">
+          <div className=" flex 2xl:flex-col items-start justify-start 2xl:pl-24 pl-0 xl:mt-0 lg:ml-24 xl:ml-0 lg:w-96 w-full ">
             {" "}
             <div className="flex items-start flex-col w-full">
-              <label className="text-xl mb-5">Niveau d'activité :</label>
+              <label className="lg:text-xl text-md mb-5">
+                Niveau d'activité :
+              </label>
               <select
-                className="form-select mt-2 rounded-xl py-2 px-4 w-40"
+                className="form-select mt-2 rounded-xl py-2 px-4 lg:w-40 w-32"
                 name="activity"
                 value={activityLevel}
                 onChange={handleActivityLevelChange}
@@ -173,10 +175,10 @@ function Form({}) {
               </select>
             </div>
             <div className="w-full  2xl:mt-10 ">
-              <span className="text-xl  mb-5">Objectif : </span>
+              <span className="lg:text-xl text-md mb-5">Objectif : </span>
               <div className="mt-5">
                 <select
-                  className="form-select mt-2 rounded-xl py-2 px-4 w-40"
+                  className="form-select mt-2 rounded-xl py-2 px-4 lg:w-40 w-32"
                   name="caloriesDeficit"
                   value={caloriesDeficit}
                   onChange={handleObjectifChange}

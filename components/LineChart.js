@@ -203,17 +203,17 @@ const LineChart = () => {
   return (
     <div className="w-full h-full flex-col items-start justify-center text-slate-200">
       <h4 className="text-2xl mt-8 pl-10 mb-8">Tracking du poids</h4>
-      <div className="w-11/12 pl-10 h-64">
+      <div className="w-11/12 lg:pl-10 h-64">
         <Line data={chartData} options={options} />
       </div>
       <form
         className="pl-10 pt-5 flex justify-evenly"
         onSubmit={combinedSubmitHandler}
       >
-        <label className="">
+        <label className="lg:mb-0 mb-5">
           Nouvelle pesée(kg):
           <input
-            className="px-5 py-4 text-slate-200 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70 w-1/4 ml-5 mr-5"
+            className="px-5 lg:py-4 py-2 text-slate-200 sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-zinc-100 border-1 placeholder-opacity-50 border-zinc-200 border-opacity-70 w-1/4 ml-5 mr-5 mt-5 lg:mt-0"
             type="number"
             value={newWeight}
             onChange={(e) => setNewWeight(e.target.value)}

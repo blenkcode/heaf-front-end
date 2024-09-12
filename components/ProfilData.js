@@ -76,11 +76,11 @@ function ProfilData() {
 
   return (
     <div className="bg-sky-900  flex items-center w-full text-slate-200 p-10 relative mb-5 rounded-xl">
-      <div className=" w-11/12">
+      <div className=" lg:w-11/12 w-full ">
         <div className="text-2xl mb-8">{pseudo}</div>
-        <div className=" flex w-full">
-          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  hover:bg-customBlue2 transition-colors  w-60 h-fit  mr-8 flex-col items-start py-2 pl-4">
-            <div className="flex justify-between w-full pr-2">
+        <div className=" flex w-full lg:flex-row flex-col items-center">
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  hover:bg-customBlue2 transition-colors  lg:w-60 w-full h-fit  lg:mr-8 flex-col items-start py-2 pl-4 lg:mb-0 mb-5">
+            <div className="flex justify-between w-full pr-2 ">
               Poids <FontAwesomeIcon className="p-1" icon={faWeightScale} />
             </div>{" "}
             <span className="text-3xl mt-2">
@@ -88,7 +88,7 @@ function ProfilData() {
               {weight} <span className="text-2xl">Kg</span>{" "}
             </span>
           </span>
-          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-60 h-fit hover:bg-customBlue2 transition-colors  mr-8 flex-col items-start py-2 pl-4">
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  hover:bg-customBlue2 transition-colors  lg:w-60 w-full h-fit  lg:mr-8 flex-col items-start py-2 pl-4 lg:mb-0 mb-5">
             <div className="flex justify-between w-full pr-2">
               Objectif <FontAwesomeIcon className="p-1" icon={faBullseye} />
             </div>{" "}
@@ -97,7 +97,7 @@ function ProfilData() {
               {objectif} <span className="text-2xl">Kcal</span>{" "}
             </span>
           </span>
-          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-60 h-fit  hover:bg-customBlue2 transition-colors  mr-8 flex-col items-start py-2 pl-4">
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  hover:bg-customBlue2 transition-colors  lg:w-60 w-full h-fit  lg:mr-8 flex-col items-start py-2 pl-4 lg:mb-0 mb-5">
             <div className="flex justify-between w-full pr-2">
               BMR <FontAwesomeIcon className="p-1" icon={faFire} />
             </div>{" "}
@@ -106,7 +106,7 @@ function ProfilData() {
               {BMR} <span className="text-2xl">Kcal</span>{" "}
             </span>
           </span>
-          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center   w-60 h-fit  hover:bg-customBlue2 transition-colors   mr-8 flex-col items-start py-2 pl-4">
+          <span className="border-slate-300 border-1 border-opacity-80 rounded-xl flex justify-center  hover:bg-customBlue2 transition-colors  lg:w-60 w-full h-fit  lg:mr-8 flex-col items-start py-2 pl-4 lg:mb-0 mb-5">
             <div className="flex justify-between w-full pr-2">
               TDEE <FontAwesomeIcon className="p-1" icon={faFire} />
             </div>{" "}
