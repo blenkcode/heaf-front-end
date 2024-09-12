@@ -11,7 +11,7 @@ function Profil() {
     router.push("/");
   };
   return (
-    <main className="h-lvh bg-diagonal-split flex flex-col xl:flex-row justify-evenly items-center relative ">
+    <main className="lg:h-lvh h-fit bg-diagonal-split flex flex-col xl:flex-row justify-evenly items-center relative ">
       <Header></Header>
       <div className=" lg:w-10/12 px-2 lg:px-0 h-auto pt-12 mt-10 lg:mt-0  ">
         <div className="text-3xl pb-12 ml-3 text-sky-900 font-bold">
