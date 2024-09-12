@@ -68,7 +68,7 @@ function Home({}) {
               )}
             </div>
           </div>
-          <div className="lg:w-fit lg:h-fit w-0 h-0z-20">
+          <div className="w-fit h-fit z-20">
             <Anim onLoad={handleSplineLoad} />
           </div>
         </main>
