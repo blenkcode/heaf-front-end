@@ -40,7 +40,7 @@ function Home({}) {
         <main className="h-fit lg:h-lvh text-sky-900 bg-diagonal-split flex flex-col xl:flex-row justify-evenly items-center relative overflow-x-hidden ">
           <Header></Header>
           <div className="flex flex-col sm:flex-row xl:flex-col relative xl:items-start items-center xl-w-fit justify-around z-10 xl:ml-10 ml-0 2xl:ml-0 pt-24 sm:pt-12 xl:pt-0 ">
-            <div className="xl:w-full w-full sm:w-1/2">
+            <div className="xl:w-full w-full sm:w-1/2 px-10 lg:px-0">
               <h1 className="text-7xl flex items-center font-bold">
                 Heaf{" "}
                 <a
