@@ -86,9 +86,12 @@ function Form({}) {
       <div className="  z-10 w-full flex-col flex items-center  justify-center h-full px-5 pt-12 lg:pt-0  ">
         <div className="w-fit relative lg:mb-0 mb-12 2xl:mt-0 lg:mt-16  mt-10 h-auto flex flex-col justify-center items-start pt-0   ">
           <div className="w-96 h-160 lg:visible invisible absolute -top-20 -left-24 rounded-full border-8 border-sky-900 z-10 "></div>
-          <div className="lg:text-6xl text-3xl font-bold ">
+          <div className="lg:text-6xl text-3xl font-bold bg-diagonal-split rounded-full z-50">
             Hello{" "}
-            <span className="lg:text-6xl text-3xl font-bold ">{pseudo}</span>!
+            <span className="lg:text-6xl text-3xl font-bold  ">
+              {pseudo}Florine
+            </span>
+            !
           </div>
           <br />
           <div className="lg:text-2xl text-lg font-normal z-50 lg:py-5 bg-diagonal-split ">
