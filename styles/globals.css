@@ -25,13 +25,13 @@ body {
 
 @font-face {
   font-family: "strawfordregular";
-  src: url("../public/fonts/strawford-regular-webfont.eot");
+  src: url("../public/Fonts/strawford-regular-webfont.eot");
 
-  src: url("../public/fonts/strawford-regular-webfont.eot?#iefix")
+  src: url("../public/Fonts/strawford-regular-webfont.eot?#iefix")
       format("embedded-opentype"),
-    url("../public/fonts/strawford-regular-webfont.woff2") format("woff2"),
-    url("../public/fonts/strawford-regular-webfont.woff") format("woff"),
-    url("../public/fonts/strawford-regular-webfont.ttf") format("truetype");
+    url("../public/Fonts/strawford-regular-webfont.woff2") format("woff2"),
+    url("../public/Fonts/strawford-regular-webfont.woff") format("woff"),
+    url("../public/Fonts/strawford-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
