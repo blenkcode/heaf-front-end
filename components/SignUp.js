@@ -46,12 +46,12 @@ function SignUp({ onToggleForm }) {
     setEmailError(false);
   };
   return (
-    <div className=" w-full h-full  bg-opacity-35  text-sky-900 flex flex-col pt-8    ">
-      <div className="text-black text-xl flex-col   w-full ">
-        <div className="mb-10 flex flex-col justify-around ">
+    <div className=" w-full h-full  bg-opacity-35  text-sky-900 flex flex-col items-center justify-center lg:pt-8    ">
+      <div className="text-black lg:text-xl text-sm flex-col flex  w-full items-center justify-center ">
+        <div className="lg:mb-10 mb-5 flex flex-col justify-around ">
           {" "}
           <input
-            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900  border-opacity-100 w-80"
+            className="px-5 lg:py-4 py-3  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900  border-opacity-100 lg:w-80 w-72 "
             type="text"
             placeholder="Pseudo"
             value={pseudo}
@@ -60,10 +60,10 @@ function SignUp({ onToggleForm }) {
           />
           {userError && <div className="error2">L'utilisateur existe déjà</div>}
         </div>
-        <div className="mb-10 flex flex-col justify-around">
+        <div className="lg:mb-10 mb-5 flex flex-col justify-around">
           {" "}
           <input
-            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900 border-opacity-100 w-80"
+            className="px-5 lg:py-4 py-3  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900  border-opacity-100 lg:w-80 w-72 "
             type="text"
             placeholder="johndoe@gmail.com"
             value={email}
@@ -72,10 +72,10 @@ function SignUp({ onToggleForm }) {
           />
           {emailError && <div className="error">Invalid email address</div>}
         </div>
-        <div className="mb-10 flex flex-col justify-around">
+        <div className="lg:mb-10 mb-5 flex flex-col justify-around">
           {" "}
           <input
-            className="px-5 py-4  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900 border-opacity-100 w-80"
+            className="px-5 lg:py-4 py-3  sm:py-2 rounded-xl bg-slate-100 bg-opacity-0  placeholder-sky-900 border-1 placeholder-opacity-50 border-sky-900 text-sky-900  border-opacity-100 lg:w-80 w-72 "
             type="password"
             value={password}
             placeholder="Mot de passe"

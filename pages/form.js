@@ -84,12 +84,13 @@ function Form({}) {
     <main className="h-auto min-h-lvh text-sky-900 bg-diagonal-split  flex flex-col xl:flex-row justify-evenly items-center relative overflow-x-hidden ">
       <Header></Header>
       <div className=" w-full xl:w-1/2 h-full px-5 lg:pl-32 pt-12 xl:pt-0 ">
-        <div className="w-full mb-12 2xl:mt-0 mt-16 h-auto flex flex-col justify-center items-start pt-0 2xl:pb-10  ">
-          <div className="text-6xl  font-bold ">
-            Hello <span className="text-6xl  font-normal ">{pseudo}</span>!
+        <div className="w-full mb-12 2xl:mt-0 lg:mt-16 mt-10 h-auto flex flex-col justify-center items-start pt-0 2xl:pb-10  ">
+          <div className="lg:text-6xl text-3xl font-bold ">
+            Hello{" "}
+            <span className="lg:text-6xl text-3xl font-bold ">{pseudo}</span>!
           </div>
           <br />
-          <div className="text-2xl font-normal ">
+          <div className="lg:text-2xl text-lg font-normal ">
             {" "}
             Ces informations nous permettent de définir ensemble ton profil
             Heaf.
@@ -98,10 +99,10 @@ function Form({}) {
 
         <div className="flex flex-col 2xl:flex-row xl:flex-col lg:flex-row w-full ">
           {" "}
-          <div className=" w-fit h-auto flex flex-col justify-center items-start ">
+          <div className=" lg:w-fit h-auto flex flex-col justify-center lg:items-start items-center">
             <div className="lg:w-80 w-full ">
-              <div className=" flex justify-between items-start mb-6">
-                <span className="text-xl ">Âge :</span>
+              <div className=" flex justify-between items-start mb-6  ">
+                <span className="lg:text-xl text-base ">Âge :</span>
                 <input
                   value={age}
                   onChange={handleAgeChange}
@@ -110,7 +111,7 @@ function Form({}) {
                 />
               </div>
               <div className=" flex justify-between items-start mb-6">
-                <span className="text-xl">Poids (Kgs)</span>
+                <span className="lg:text-xl text-base ">Poids (Kgs)</span>
                 <input
                   value={weight}
                   onChange={handleWeightChange}
@@ -119,7 +120,7 @@ function Form({}) {
                 />
               </div>
               <div className=" flex justify-between items-start mb-6">
-                <span className="text-xl">Taille (cm)</span>
+                <span className="lg:text-xl text-base ">Taille (cm)</span>
                 <input
                   value={height}
                   onChange={handleHeightChange}
@@ -128,7 +129,7 @@ function Form({}) {
                 />
               </div>
               <div className=" flex justify-between items-center mb-6">
-                <span className="text-xl">Sexe : </span>
+                <span className="lg:text-xl text-base ">Sexe : </span>
                 <div className="flex items-center justify-center mt-1">
                   <div className=" ">
                     <input

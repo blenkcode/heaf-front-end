@@ -1,20 +1,37 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    background-color:  #27548a;/* Exemple : couleur similaire à celle de votre fond */
-  }
+  background-color: #27548a;
+  font-family: "strawfordregular"; /* Exemple : couleur similaire à celle de votre fond */
+}
 
-  .bg-diagonal-split {
- 
-   background-color: #e2e2e2 
-  }
-  .bg-diagonal-split2 {
-    @apply bg-gradient-to-tr from-sky-800 to-slate-200;
-    background-image: linear-gradient(50deg, #27548a 100%, #ffffff 55%, #ffffff 50%, #27548a 100%);
-    background-size: cover;
-    background-position: center;
-  }
+.bg-diagonal-split {
+  background-color: #e2e2e2;
+}
+.bg-diagonal-split2 {
+  @apply bg-gradient-to-tr from-sky-800 to-slate-200;
+  background-image: linear-gradient(
+    50deg,
+    #27548a 100%,
+    #ffffff 55%,
+    #ffffff 50%,
+    #27548a 100%
+  );
+  background-size: cover;
+  background-position: center;
+}
 
+@font-face {
+  font-family: "strawfordregular";
+  src: url("../public/fonts/strawford-regular-webfont.eot");
+
+  src: url("../public/fonts/strawford-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/strawford-regular-webfont.woff2") format("woff2"),
+    url("../public/fonts/strawford-regular-webfont.woff") format("woff"),
+    url("../public/fonts/strawford-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
